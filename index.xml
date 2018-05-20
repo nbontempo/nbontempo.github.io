@@ -17,7 +17,7 @@
       <pubDate>Thu, 20 Jul 2017 16:38:04 -0300</pubDate>
       
       <guid>http://nickbom.github.io/posts/git/</guid>
-      <description>Git Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um fluxo de trabalho que tem sido muito utilizado pela comunidade é o Feature Branch Workflow, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova branch, ao invés de ser trabalhada na branch master, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na branch principal.</description>
+      <description>Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um fluxo de trabalho que tem sido muito utilizado pela comunidade é o Feature Branch Workflow, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova branch, ao invés de ser trabalhada na branch master, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na branch principal.</description>
     </item>
     
     <item>
