@@ -8,7 +8,7 @@
   
   <title>Worflow com o Git - Sugestões de uso - Nicolas Bontempo</title>
   
-  <meta name="description" content="Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um fluxo de trabalho que tem sido muito utilizado pela comunidade é o Feature Branch Workflow, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova branch, ao invés de ser trabalhada na branch master, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na branch principal.">
+  <meta name="description" content="Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um worflow que tem sido muito utilizado pela comunidade é o Feature Branch Workflow, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova branch, ao invés de ser trabalhada na branch master, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na branch principal.">
   <meta name="author" content="Nicolas Bontempo">
   
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
@@ -60,7 +60,7 @@
   </header>
   <div class="post-content">
 
-<p>Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um fluxo de trabalho que tem sido muito utilizado pela comunidade é o <em>Feature Branch Workflow</em>, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova <em>branch</em>, ao invés de ser trabalhada na <em>branch master</em>, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na <em>branch</em> principal. Esse fluxo de trabalho melhora a comunicação entre a equipe graças a <em>code reviews</em> pelos <em>pull requests</em>, tornando o ambiente de trabalho mais interativo e comunicativo, para se aprofundar nesse assunto recomendo o artigo da Atlassian <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow">Feature-branch-workflow</a> (Spoiler, conteúdo em Inglês).</p>
+<p>Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um worflow que tem sido muito utilizado pela comunidade é o <em>Feature Branch Workflow</em>, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova <em>branch</em>, ao invés de ser trabalhada na <em>branch master</em>, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na <em>branch</em> principal. Esse worflow melhora a comunicação entre a equipe graças a <em>code reviews</em> pelos <em>pull requests</em>, tornando o ambiente de trabalho mais interativo e comunicativo, para se aprofundar nesse assunto recomendo o artigo da Atlassian <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow">Feature-branch-workflow</a> (Spoiler, conteúdo em Inglês).</p>
 
 <p>Outro conceito bem interessante é utilizar o <em>rebasing</em> quando for oportuno, já que ele melhora a visão como um todo das mudanças realizadas na <em>master</em> enquanto você estava criando sua nova funcionalidade, mas o <em>rebase</em> deve ser utilizado com cuidado como dito no artigo também da Atlassian <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing">Interactive Rebasing</a> (Spoiler, conteúdo em Inglês).</p>
 
@@ -105,7 +105,7 @@ git push -f
 
 <h2 id="regras">Regras</h2>
 
-<p>Existem cuidados com o git que devem ser mantidos em mente, para obedecer os conceitos do fluxo de trabalho e gerar menores problemas no uso do git:</p>
+<p>Existem cuidados com o git que devem ser mantidos em mente, para obedecer os conceitos do worflow e gerar menores problemas no uso do git:</p>
 
 <ul>
 <li>Realizar trabalho apenas na <em>branch</em> de novas funcionalidades.</li>
