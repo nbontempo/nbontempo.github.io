@@ -69,38 +69,47 @@
 <p>Os principais passos para elucidar esses conceitos em formato prático, são os seguintes:</p>
 
 <ul>
-<li>Criar uma <em>branch</em> com uma nova funcionalidade ou correção de bugs
-<code>
-git checkout -b &lt;nomeDaBranch&gt;
-</code></li>
-<li>Fazer mudanças
-<code>
-git add
+<li><p>Criar uma <em>branch</em> com uma nova funcionalidade ou correção de bugs</p>
+
+<pre><code>git checkout -b &lt;nomeDaBranch&gt;
+</code></pre></li>
+
+<li><p>Fazer mudanças</p>
+
+<pre><code>git add
 git commit -m &quot;descrição das mudanças&quot;
-</code></li>
-<li>Sincronizar com as mudanças do servidor, caso você as tenha perdido
-<code>
-git checkout develop
+</code></pre></li>
+
+<li><p>Sincronizar com as mudanças do servidor, caso você as tenha perdido</p>
+
+<pre><code>git checkout develop
 git pull
-</code></li>
-<li>Atualizar a sua <em>branch</em> com as últimas mudanças da <em>branch</em> de desenvolvimento utilizando <em>interactive rebase</em>
-<code>
-git checkout &lt;nomeDaBranch&gt;
+</code></pre></li>
+
+<li><p>Atualizar a sua <em>branch</em> com as últimas mudanças da <em>branch</em> de desenvolvimento utilizando <em>interactive rebase</em></p>
+
+<pre><code>git checkout &lt;nomeDaBranch&gt;
 git rebase -i develop
-</code></li>
-<li>Caso você possua conflitos, resolva eles (<a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/">Aqui como</a> (Spoiler, conteúdo em Inglês)) e continue o seu <em>rebase</em>
-<code>
-git add &lt;arquivo1&gt; &lt;arquivo2&gt; ...
+</code></pre></li>
+
+<li><p>Caso você possua conflitos, resolva eles (<a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/">Aqui como</a> (Spoiler, conteúdo em Inglês)) e continue o seu <em>rebase</em></p>
+
+<pre><code>git add &lt;arquivo1&gt; &lt;arquivo2&gt; ...
 git rebase --continue
-</code></li>
-<li>Atualize a sua <em>branch</em>. Como o <em>rebase</em> modifica o histórico, você precisa utilizar o <code>-f</code> para forçar mudanças dentro da <em>branch</em> remota, caso você esteja trabalhando com mais pessoas nessa <em>branch</em>, use mudanças menos destrutivas através <code>--force-with-lease</code> (<a href="https://developer.atlassian.com/blog/2015/04/force-with-lease/">Explicação</a> (Spoiler, conteúdo em Inglês)).
-<code>
-git push -f
-</code></li>
-<li>Faça um <em>Pull request</em></li>
-<li>Através do <em>Pull request</em> a equipe pode dar opiniões sobre a qualidade do código, utilizando <em>code reviews</em>, se bem implementado na equipe pode vir a ser muito util e motivador</li>
-<li>O <em>Pull request</em> vai ser aceito, realizado o <em>merge</em> e fechado pelo revisor</li>
-<li>Remover a sua <em>branch</em> local quando estiver finalizada</li>
+</code></pre></li>
+
+<li><p>Atualize a sua <em>branch</em>. Como o <em>rebase</em> modifica o histórico, você precisa utilizar o <code>-f</code> para forçar mudanças dentro da <em>branch</em> remota, caso você esteja trabalhando com mais pessoas nessa <em>branch</em>, use mudanças menos destrutivas através <code>--force-with-lease</code> (<a href="https://developer.atlassian.com/blog/2015/04/force-with-lease/">Explicação</a> (Spoiler, conteúdo em Inglês)).</p>
+
+<pre><code>git push -f
+</code></pre></li>
+
+<li><p>Faça um <em>Pull request</em></p></li>
+
+<li><p>Através do <em>Pull request</em> a equipe pode dar opiniões sobre a qualidade do código, utilizando <em>code reviews</em>, se bem implementado na equipe pode vir a ser muito util e motivador</p></li>
+
+<li><p>O <em>Pull request</em> vai ser aceito, realizado o <em>merge</em> e fechado pelo revisor</p></li>
+
+<li><p>Remover a sua <em>branch</em> local quando estiver finalizada</p></li>
 </ul>
 
 <h2 id="regras">Regras</h2>
@@ -112,12 +121,12 @@ git push -f
 <li>Criar <em>Pull requests</em> apenas para a <em>branch <code>develop</code></em></li>
 <li>Nunca realizar <em>push</em> diretamente para as <em>branch <code>develop</code></em> ou <em><code>master</code></em>.</li>
 <li>Atualizar sua <em>branch <code>develop</code></em> e fazer <em>rebase</em> antes de realizar o <em>push</em> da sua nova funcionalidade e criar um <em>pull request</em></li>
-<li>Resover potenciais conflitos enquanto realiza o <em>rebase</em> e antes de criar um <em>pull request</em></li>
+<li>Resolver potenciais conflitos enquanto realiza o <em>rebase</em> e antes de criar um <em>pull request</em></li>
 <li>Deletar a <em>branch</em> local e remover a <em>branch</em> de novas funcionalidade antes de fazer o merge.</li>
 <li>Antes de fazer um <em>Pull request</em>, tenha certeza que a sua <em>branch</em> de nova funcionalidade compila normalmente e passa em todos os testes (incluso teste de estilo de código).</li>
 <li>Utilizar um gitignore apropriado para cada projeto, <a href="https://www.gitignore.io/">crio meus gitignore através desse link</a>.</li>
 <li>Proteja a sua <em>branch develop</em> e a sua <em>master</em> por permissões (No <a href="https://help.github.com/articles/about-protected-branches/">Github</a> e <a href="https://confluence.atlassian.com/bitbucketserver/using-branch-permissions-776639807.html">Bitbucket</a>).</li>
-<li>Escreva mensagens claras no Commit, tente alinhar as suas mensagens com o time, sempre observando se as suas mensagens estão claras iguais ao resto do time.</li>
+<li>Escreva mensagens claras no <em>Commit</em>, tente alinhar as suas mensagens com o time, sempre observando se as suas mensagens estão claras iguais ao resto do time, talvez até sugerindo um padrão para melhorar a organização dos <em>commits</em>.</li>
 </ul>
 </div>
   <footer class="post-footer">

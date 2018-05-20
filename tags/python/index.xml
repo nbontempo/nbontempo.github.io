@@ -18,7 +18,7 @@
       
       <guid>http://nickbom.github.io/posts/programacao-orientada-objetos-python/</guid>
       <description>Nesse guia você irá aprender os tipos fundamentais de python, funções e métodos, como definir uma classe, classes aninhadas, herança e exceções. Tudo o que é necessário para um bom inicio com python.
-1. Tipos Fundamentais Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos: - Identificador - Valor - Tipo, todo objeto tem um tipo.</description>
+Tipos Fundamentais Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos:</description>
     </item>
     
   </channel>

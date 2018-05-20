@@ -19,7 +19,7 @@
       <guid>http://nickbom.github.io/posts/inferno-dependencias/</guid>
       <description>Ferramentas, bibliotecas e frameworks que usamos hoje para construir nossas aplicações web são drasticamente diferentes daquelas usadas a poucos anos atrás.
 Em poucos anos, muitas dessas tecnologias mudarão novamente. Mesmo assim, muitos de nós utilizamos essas tecnologias como uma parte central, inseparável dos nossos aplicativos.
-Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem ficar inalteradas para sempre. Só que elas não vão. E esse é o problema.</description>
+Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem ficar inalteradas para sempre. Só que elas não vão e esse é o problema.</description>
     </item>
     
   </channel>

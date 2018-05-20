@@ -10,7 +10,7 @@
   
   <meta name="description" content="Ferramentas, bibliotecas e frameworks que usamos hoje para construir nossas aplicações web são drasticamente diferentes daquelas usadas a poucos anos atrás.
 Em poucos anos, muitas dessas tecnologias mudarão novamente. Mesmo assim, muitos de nós utilizamos essas tecnologias como uma parte central, inseparável dos nossos aplicativos.
-Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem ficar inalteradas para sempre. Só que elas não vão. E esse é o problema.">
+Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem ficar inalteradas para sempre. Só que elas não vão e esse é o problema.">
   <meta name="author" content="Nicolas Bontempo">
   
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
@@ -68,7 +68,7 @@ Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem
 
 <p>Em poucos anos, muitas dessas tecnologias mudarão novamente. Mesmo assim, muitos de nós utilizamos essas tecnologias como uma parte central, inseparável dos nossos aplicativos.</p>
 
-<p>Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem ficar inalteradas para sempre. Só que elas não vão. E esse é o problema.</p>
+<p>Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem ficar inalteradas para sempre. Só que elas não vão e esse é o problema.</p>
 
 <p>Depois de algum tempo em desenvolvimento, design e arquitetura de web apps. Eu encontrei duas importantes verdades:</p>
 
@@ -78,7 +78,7 @@ Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem
 
 <p>Esse artigo trata de reconciliar essas duas verdades, para que os nossos aplicativos tenham uma chance de sobrevivência em longo prazo.</p>
 
-<h3 id="o-buraco-é-muito-fundo-certamente">O buraco é muito fundo certamente</h3>
+<h2 id="o-buraco-é-muito-fundo-certamente">O buraco é muito fundo certamente</h2>
 
 <p>Se começarmos pensando todas as coisas que nossa aplicação web depende, é fácil pensar em uma duzia de coisas ou mais, antes de chegar ao código:</p>
 
@@ -121,21 +121,21 @@ Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem
 
 <p>No caso de dependências removidas, nós podemos geralmente confiar em um terceiro para resolver o problema, uma vez que eles são dependentes destes.</p>
 
-<h3 id="porque-precisamos-usar-dependências-externas">Porque precisamos usar dependências externas?</h3>
+<h2 id="porque-precisamos-usar-dependências-externas">Porque precisamos usar dependências externas?</h2>
 
-<p>Uma grande porção das aplicações web existem para resolver pequenos problemas: autenticação, autorização, acesso de dados, tratamento de erros, navegação, logging, encriptação, mostrar lista de dados, validação de formulários de entrada e muitos outros&hellip;.</p>
+<p>Uma grande porção das aplicações web existem para resolver pequenos problemas: autenticação, autorização, acesso de dados, tratamento de erros, navegação, logging, encriptação, mostrar lista de dados, validação de formulários de entrada, fluxos de dados e muitos outros&hellip;.</p>
 
 <p>Independente de quais tecnologias você usa, tem uma grande chance de que problemas comuns tenham uma solução existente e estejam disponíveis como uma biblioteca que você facilmente pode adquirir e plugar no seu código básico. Escrever qualquer coisa do zero é geralmente uma perda de tempo.</p>
 
-<p>Você precisa concentrar no código para resolver problemas incomuns ou resolver um problema comum de uma maneira incomum. Isso é o que torna uma aplicação de valor: o código que implementa as regras de negócio que são únicos ao seu aplicativo, o diferencial da sua aplicação (o seu <code>tempero secreto</code>).</p>
+<p>Você precisa concentrar no código para resolver problemas incomuns ou resolver um problema comum de uma maneira incomum. Isso é o que torna uma aplicação de valor: o código que implementa as regras de negócio que são únicas ao seu aplicativo, o diferencial da sua aplicação (o seu <code>tempero secreto</code>).</p>
 
 <p>A busca do google e seu algoritmo de page rank, o filtro da timeline do facebook, a seção de recomendação do netflix e algoritmos de compressão, todo o código atrás dessas funcionalidades são o <code>tempero secreto</code> por trás desses produtos.</p>
 
 <p>Códigos de terceiros em forma de bibliotecas, possibilita que você implemente rapidamente essas funcionalidades comuns no seu aplicativo, para que você sempre se foque no seu <code>tempero secreto</code>.</p>
 
-<h3 id="porque-dependências-de-terceiros-são-ruins">Porque dependências de terceiros são ruins</h3>
+<h2 id="porque-dependências-de-terceiros-são-ruins">Porque dependências de terceiros são ruins</h2>
 
-<p>Olhe um pouco para um web app não trivial construído nos últimos anos e você ficará absolutamente surpreso com a quantidade de código vindo de bibliotecas de terceiros, acesse qualquer website utilizando o plugin <a href="https://wappalyzer.com/">Wappalyzer</a> e você ficará assustado com o número de bibliotecas utilizadas nas aplicações web. E se uma dessas bibliotecas de terceiros <a href="https://daveceddia.com/angular-2-should-you-upgrade/">muda drasticamente</a>, ou <a href="http://blog.parse.com/announcements/moving-on/">desaparece</a>, ou <a href="http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/">quebra</a>?</p>
+<p>Olhe um pouco para uma aplicação Web não trivial construída nos últimos anos e você ficará absolutamente surpreso com a quantidade de código vindo de bibliotecas de terceiros, acesse qualquer website utilizando o plugin <a href="https://wappalyzer.com/">Wappalyzer</a> e você ficará assustado com o número de bibliotecas utilizadas nas aplicações web. E se uma dessas bibliotecas de terceiros <a href="https://daveceddia.com/angular-2-should-you-upgrade/">muda drasticamente</a>, ou <a href="http://blog.parse.com/announcements/moving-on/">desaparece</a>, ou <a href="http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/">quebra</a>?</p>
 
 <p>Se é um projeto de código aberto, pelo menos você pode concertar por si mesmo. Mas quão bem você vai entender todo o código naquela biblioteca que você não possui? Uma grande razão do porque você usa uma biblioteca em primeiro lugar é conseguir os benefícios do código sem ter que se importar com detalhes. Mas agora você está preso. Você gastou uma fortuna nessa dependência, que você não possui e não controla.</p>
 
@@ -147,9 +147,9 @@ Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem
 
 <p>A interrupção que isso causou para uma aplicação jovem e incipiente foi tão grande que a empresa acabou com o app completamente.</p>
 
-<h3 id="balanceando-as-consequências-e-os-benefícios">Balanceando as consequências e os benefícios</h3>
+<h2 id="balanceando-as-consequências-e-os-benefícios">Balanceando as consequências e os benefícios</h2>
 
-<p>Minha antiga solução para conter os riscos e colher os benefícios das bibliotecas é utilizar o <a href="https://en.wikipedia.org/wiki/Adapter_pattern">Adapter Pattern</a>.</p>
+<p>Minha antiga solução para conter os riscos e colher os benefícios das bibliotecas é utilizar o <a href="https://en.wikipedia.org/wiki/Adapter_pattern">Adapter Pattern</a>. Seguir os padrões SOLID também é aconselhável.</p>
 
 <p>Essencialmente, você coloca códigos de terceiros em uma classe adapter ou um módulo que você escreveu. Isso então funciona de uma forma que você consiga isolar o código de terceiros de uma maneira que você controle.</p>
 
@@ -176,7 +176,7 @@ Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem
 <li>Tem um suporte ativo de grandes organizações, preferencialmente um nome familiar de empresa ou instituição.</li>
 </ul>
 
-<p>Possuir apenas popularidade não é uma prerrogativa, veja o <a href="https://github.com/angular/angular">angular</a> por exemplo. Além de controlar a probabilidade de mudança, devemos controlar também os danos que podem ser causados, uma biblioteca de terceiro ou framework vai causar menos dano em sua aplicação quando algumas ou todas as prerrogativas seguintes são verdadeiras:</p>
+<p>Possuir apenas popularidade não é uma prerrogativa, veja o <a href="https://github.com/angular/angular">angular</a> por exemplo, que na mudança para o Angular 2 quebrou completamente a compatibilidade com a sua versão antiga. Além de controlar a probabilidade de mudança, devemos controlar também os danos que podem ser causados, uma biblioteca de terceiro ou framework vai causar menos dano em sua aplicação quando algumas ou todas as prerrogativas seguintes são verdadeiras:</p>
 
 <ul>
 <li>Ela foi usada apenas em pequenas partes da sua aplicação, em vez de ser usada por toda parte.</li>
@@ -189,7 +189,7 @@ Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem
 
 <p>Quando conversamos sobre o código que é a proporção central da sua aplicação, o <code>tempero secreto</code>, você precisa ser extremamente cuidado e protecionista. Fazer um código extremamente independente quanto possível. Se você absolutamente precisa usar uma dependência, considerar injetar ela, ao contrário de referenciar a mesma diretamente. Mesmo assim, seja cuidadoso.</p>
 
-<p>Algumas vezes isso significa &lsquo;não&rsquo; para uma biblioteca de terceiros que você pensa ser realmente muito legal, ou que você queira muito usar por uma razão ou outra. Seja forte. Acredite, vai pagar. Apenas pergunte para quem investiu pesado no primeiro lançamento de angular, ou a empresa que perdeu a aplicação. Não foi divertido. Acredite.</p>
+<p>Algumas vezes isso significa &lsquo;não&rsquo; para uma biblioteca de terceiros que você pensa ser realmente muito legal, ou que você queria muito usar por uma razão ou outra. Seja forte. Acredite, vai pagar. Apenas pergunte para quem investiu pesado no primeiro lançamento de angular, ou a empresa que perdeu a aplicação. Não foi divertido. Acredite.</p>
 
 <p>Outra forma de visualizar as dependências de outra maneira é gerar um grafo de dependências para as suas aplicações, é uma boa forma de entender o nível de risco introduzido pelas suas dependências. Existem ferramentas gratuitas para fazer isso em diversas linguagens.</p>
 </div>

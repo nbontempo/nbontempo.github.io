@@ -8,7 +8,8 @@
   
   <title>Introdução a Microservices - Nicolas Bontempo</title>
   
-  <meta name="description" content="Introdução Hoje, o ecossistema tecnológico muda incessantemente, novas linguagens, estruturas e soluções surgem a todo momento. Usuários esperam que as empresas entreguem valor rápido e frequente. Aplicações com a arquitetura monolítica não lidar com os desafios da mudança rápida das condições de mercado. Então temos os MicroServices, que é um estilo de arquitetura de software mais ideal para o desenvolvimento de aplicações de software mais escaláveis baseadas na nuvem.">
+  <meta name="description" content="Hoje, o ecossistema tecnológico muda incessantemente, novas linguagens, estruturas e soluções surgem a todo momento. Usuários esperam que as empresas entreguem valor rápido e frequente. Aplicações com a arquitetura monolítica não lidar com os desafios da mudança rápida das condições de mercado. Então temos os MicroServices, que é um estilo de arquitetura de software mais ideal para o desenvolvimento de aplicações de software mais escaláveis baseadas na nuvem.
+O que são microservices?">
   <meta name="author" content="Nicolas Bontempo">
   
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
@@ -55,21 +56,23 @@
     <p class="post-meta">Nicolas Bontempo · 13/11/2016<div style="color:grey; font-size:16px;">
         <strong>Tags:</strong> 
         <a href="/%20/tags/%20microservices">microservices</a> 
+        <a href="/%20/tags/%20introdu%C3%A7%C3%A3o">introdução</a> 
       </div>
     </p>
   </header>
   <div class="post-content">
 
-<h3 id="introdução">Introdução</h3>
-
 <p>Hoje, o ecossistema tecnológico muda incessantemente, novas linguagens, estruturas e soluções surgem a todo momento. Usuários esperam que as empresas entreguem valor rápido e frequente. Aplicações com a arquitetura monolítica não lidar com os desafios da mudança rápida das condições de mercado. Então temos os MicroServices, que é um estilo de arquitetura de software mais ideal para o desenvolvimento de aplicações de software mais escaláveis baseadas na nuvem.</p>
 
-<h3 id="o-que-são-microservices">O que são microservices?</h3>
+<h2 id="o-que-são-microservices">O que são microservices?</h2>
 
-<p>MicroServices são o oposto a arquitetura monolítica tradicional. Aplicações monolíticas são baseadas em uma abordagem cliente-servidor e desenvolvidos como uma unidade singular, o qual apenas uma aplicação do lado do servidor precisa trabalhar nas tarefas de manipulação do banco de dados, requisições HTTP, e todas as tarefas computacionais. O código base das diferentes funcionalidades são altamente interligados, portanto mesmo uma pequena modificação pode tornar uma integração muito complexa e transformar a implantação em um campo minado de riscos. Escalabilidade de aplicações monolíticas também é muitas vezes ineficiente, uma vez que toda a aplicação precisa ser dimensionada não apenas as peças que estão em demanda.
-Microservices, conhecidas também como estilo arquitetônico microservices, são um método de desenvolvimento de aplicativos que divide uma aplicação em pequenos serviços distintos bem definidos. MicroServices são distribuídos na rede e comunicam-se através de protocolos independentes da tecnologia. Ele surgiu como uma evolução das arquiteturas baseadas em serviços depois que a filosofia pregadaa pelo DevOps se tornou mais difundida.</p>
+<p>MicroServices são o oposto a arquitetura monolítica tradicional. Aplicações monolíticas são baseadas em uma abordagem cliente-servidor e desenvolvidos como uma unidade singular, o qual apenas uma aplicação do lado do servidor precisam trabalhar nas tarefas de manipulação do banco de dados, requisições HTTP, e todas as tarefas computacionais.</p>
 
-<h3 id="características-de-microservices">Características de MicroServices</h3>
+<p>O código base das diferentes funcionalidades são altamente interligados, portanto mesmo uma pequena modificação pode tornar uma integração muito complexa e transformar a implantação em um campo minado de riscos. Escalabilidade de aplicações monolíticas também é muitas vezes ineficiente, uma vez que toda a aplicação precisa ser dimensionada não apenas as peças que estão em demanda.</p>
+
+<p>Microservices, conhecidas também como estilo arquitetônico microservices, são um método de desenvolvimento de aplicativos que divide uma aplicação em pequenos serviços distintos bem definidos. MicroServices são distribuídos na rede e comunicam-se através de protocolos independentes da tecnologia. Ela surgiu como uma evolução das arquiteturas baseadas em serviços depois que a filosofia pregadaa pelo devops de tranformar infra estrutura em código se tornou mais difundida, já que subir diversos serviços nos anos anteriores geraria um problema gigantesco.</p>
+
+<h2 id="características-de-microservices">Características de MicroServices</h2>
 
 <p>A principal característica do estilo da arquitetura de microservices são definidas pelos princípios de baixo acoplamento e alta coesão dos serviços:
 - Aplicações são feitas de pequenos serviços independentes.
@@ -82,7 +85,7 @@ Microservices, conhecidas também como estilo arquitetônico microservices, são
 - A arquitetura baseada em MicroServices e implantação contínua é uma ótima conexão.
 - Gerenciamento descentralizado dos dados: cada serviço pode ter seu próprio banco de dados.</p>
 
-<h3 id="vantagens-dos-microservices">Vantagens dos MicroServices</h3>
+<h2 id="vantagens-dos-microservices">Vantagens dos MicroServices</h2>
 
 <ul>
 <li>Desenvolver um MicroService não necessita uma grande equipe.</li>
@@ -104,7 +107,7 @@ Microservices, conhecidas também como estilo arquitetônico microservices, são
 <li>Fácil para integrar com serviços de terceiros e ferramentas.</li>
 </ul>
 
-<h3 id="desvantagens-de-microservices">Desvantagens de MicroServices</h3>
+<h2 id="desvantagens-de-microservices">Desvantagens de MicroServices</h2>
 
 <ul>
 <li>Chamadas remotas intensivas e caras (ao invés de chamadas em processo).</li>
@@ -119,7 +122,7 @@ Microservices, conhecidas também como estilo arquitetônico microservices, são
 <li>Duplicação de esforços e replicação de funcionalidades.</li>
 </ul>
 
-<h3 id="alguns-serviços-que-utilizam-a-arquitetura-baseada-em-microservices">Alguns serviços que utilizam a arquitetura baseada em MicroServices</h3>
+<h2 id="alguns-serviços-que-utilizam-a-arquitetura-baseada-em-microservices">Alguns serviços que utilizam a arquitetura baseada em MicroServices</h2>
 
 <ul>
 <li><a href="https://eng.uber.com/soa/">Uber</a></li>
@@ -140,6 +143,10 @@ Microservices, conhecidas também como estilo arquitetônico microservices, são
       
       <li>
         <a href="/tags/microservices/">microservices</a>
+      </li>
+      
+      <li>
+        <a href="/tags/introdu%C3%A7%C3%A3o/">introdução</a>
       </li>
       
     </ul>

@@ -9,7 +9,7 @@
   <title>Programação orientada a objetos com Python - Nicolas Bontempo</title>
   
   <meta name="description" content="Nesse guia você irá aprender os tipos fundamentais de python, funções e métodos, como definir uma classe, classes aninhadas, herança e exceções. Tudo o que é necessário para um bom inicio com python.
-1. Tipos Fundamentais Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos: - Identificador - Valor - Tipo, todo objeto tem um tipo.">
+Tipos Fundamentais Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos:">
   <meta name="author" content="Nicolas Bontempo">
   
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
@@ -64,50 +64,54 @@
 
 <p>Nesse guia você irá aprender os tipos fundamentais de python, funções e métodos, como definir uma classe, classes aninhadas, herança e exceções. Tudo o que é necessário para um bom inicio com python.</p>
 
-<h3 id="1-tipos-fundamentais">1. Tipos Fundamentais</h3>
+<h2 id="tipos-fundamentais">Tipos Fundamentais</h2>
 
-<p>Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos:
-- Identificador
-- Valor
-- Tipo, todo objeto tem um tipo. O tipo ajuda a determinar que tipo de operações são possíveis com o objeto.
-- Um ou mais bases. Uma base é similar a uma super classe.</p>
+<p>Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos:</p>
+
+<ul>
+<li><p>Identificador</p></li>
+
+<li><p>Valor</p></li>
+
+<li><p>Tipo, todo objeto tem um tipo. O tipo ajuda a determinar que tipo de operações são possíveis com o objeto.</p></li>
+
+<li><p>Um ou mais bases. Uma base é similar a uma super classe.</p></li>
+</ul>
 
 <p>Exemplo:</p>
 
 <p><code>x = 2 &gt;&gt;&gt; type(x) &lt;type ‘int’&gt;</code></p>
 
-<p>Primeiramente temos uma variável inteira criada. Dentro dessa variável temos outro objeto int o qual vamos explorar mais profundamente. Quando chamamos type, ele apenas retorna o atributo de __class__.</p>
+<p>Primeiramente temos uma variável inteira criada. Dentro dessa variável temos outro objeto int o qual vamos explorar mais profundamente. Quando chamamos type, ele apenas retorna o atributo de <code>__class__</code>, como podemos ver abaixo:</p>
 
 <p><code>type(type(x)) &lt;type ‘type’&gt;</code></p>
 
-<p>E como podemos ver, o objeto int é um objeto type.</p>
+<p>E como podemos ver, o objeto int é um objeto type, além disso, o atributo <code>__bases__</code> contém um objeto chamado object, como podemos ver abaixo:</p>
 
 <p><code>type(x).__bases__ (&lt;type ‘object’&gt;,)</code></p>
 
-<p>Além disso, o atributo __bases__ contém um objeto chamado object.</p>
+<p>Depois de tudo, podemos ver que temos vários atributos relacionados com esse objetos quando chamando a função dir. Então, igual vimos TUDO é um objeto. Podemos utilizar isso como uma regra geral de python, TUDO é um objeto. Sim, tudo. Até métodos e funções.</p>
 
 <p><code>
  dir(x) [‘__abs__’, ‘__add__’, ‘__and__’, ‘__class__’, ‘__cmp__’, ‘__coerce__’, ‘__delattr__’, ‘__div__’, ‘__divmod__’, ‘__doc__’, ‘__float__’, ‘__floordiv__’, ‘__format__’, ‘__getattribute__’, ‘__getnewargs__’, ‘__hash__’, ‘__hex__’, ‘__index__’, ‘__init__’, ‘__int__’, ‘__invert__’, ‘__long__’, ‘__lshift__’, ‘__mod__’, ‘__mul__’, ‘__neg__’, ‘__new__’, ‘__nonzero__’, ‘__oct__’, ‘__or__’, ‘__pos__’, ‘__pow__’, ‘__radd__’, ‘__rand__’, ‘__rdiv__’, ‘__rdivmod__’, ‘__reduce__’, ‘__reduce_ex__’, ‘__repr__’, ‘__rfloordiv__’, ‘__rlshift__’, ‘__rmod__’, ‘__rmul__’, ‘__ror__’, ‘__rpow__’, ‘__rrshift__’, ‘__rshift__’, ‘__rsub__’, ‘__rtruediv__’, ‘__rxor__’, ‘__setattr__’, ‘__sizeof__’, ‘__str__’, ‘__sub__’, ‘__subclasshook__’, ‘__truediv__’, ‘__trunc__’, ‘__xor__’, ‘bit_length’, ‘conjugate’, ‘denominator’, ‘imag’, ‘numerator’, ‘real’]
 </code></p>
 
-<p>Depois de tudo, podemos ver que temos vários atributos relacionados com esse objetos quando chamando a função dir. Então, igual vimos TUDO é um objeto. Podemos utilizar isso como uma regra geral de python, TUDO é um objeto. Sim, tudo. Até métodos e funções.</p>
-
-<h3 id="2-funções-e-métodos">2. Funções e métodos</h3>
+<h2 id="funções-e-métodos">Funções e métodos</h2>
 
 <p>Sempre quando criamos funções, o python cria um objeto em cima da função. Quando colocamos funções dentro de uma classe elas ficam conhecidas como métodos. Como python tudo é um objeto, ele aceita apenas passagem-por-referência, isso significa que quando uma variável entra dentro de uma função ela é verdadeiramente modificada e não apenas sua cópia. Exemplo:</p>
 
-<pre><code class="language-python">  def um():
+<pre><code class="language-python">def um():
   x = 2
   print (x)
-  dobra(x)
+  dobra (x)
   print (x)
 def dobra(y):
   y = y * y
 </code></pre>
 
-<p>Com saída proveniente do programa um(), 2 e 4. Assim, o programa dobra() modificou verdadeiramente a variável.</p>
+<p>Com saída proveniente do programa <code>um()</code>, 2 e 4. Assim, o programa dobra() modificou verdadeiramente a variável.</p>
 
-<h3 id="3-definindo-uma-classe">3. Definindo uma classe</h3>
+<h2 id="definindo-uma-classe">Definindo uma classe</h2>
 
 <p>Uma classe é o que define todo o conceito de orientação a objetos, sua instâncias, métodos e outros. Em python uma classe de um certo objeto é o mesmo que seu tipo, já que TUDO é um objeto. Agora vamos mostrar como ela é utilizada em python. Vamos definir uma classe então:</p>
 
@@ -116,20 +120,21 @@ def dobra(y):
     self._largura = largura
     self._comprimento = comprimento
 Agora, vamos definir algumas instâncias com tipo Retângulo:
-c = Retangulo(1,0)
-d = Retangulo(2,0)
-e = Retangulo(3,0)
+c = Retangulo(1, 0)
+d = Retangulo(2, 0)
+e = Retangulo(3, 0)
 print (c._largura)
 print (d._largura)
 print (e._largura)
 </code></pre>
 
-<p>O que retorna como saída, 1, 2, 3. Ambas c e d se referem a duas instâncias diferentes da classe Retangulo. O atributo de instância object é acessado utilizando o operador . (ponto).</p>
+<p>O que retorna como saída, 1, 2, 3. Ambas c e d se referem a duas instâncias diferentes da classe <code>Retangulo</code>. O atributo de instância object é acessado utilizando o operador . (ponto).</p>
 
-<p>Agora, o que seria esse método __init__ utilizado para definir a classe?</p>
+<p>Agora, o que seria esse método <code>__init__</code> utilizado para definir a classe?</p>
 
-<p>Esse é o construtor em python.
-Agora vamos definir como é feito o encapsulamento em python:</p>
+<p>Esse é o construtor em python.</p>
+
+<p>Agora vamos definir como é feito o encapsulamento em python:</p>
 
 <pre><code class="language-python">class Retangulo(object):
   def getLargura(self):
@@ -139,15 +144,18 @@ Agora vamos definir como é feito o encapsulamento em python:</p>
   largura = property( fget = getLargura, fset = setLargura)
 </code></pre>
 
-<p>Esses métodos criados são utilizados para prover acesso aos atributos. Exemplo:
-c.setLargural(2)</p>
-
-<p>print (c.getLargura())
-O que modifica a largura da instância c para 2.
-Agora o property é um atributo de classe para promover o get e o set. O argumento fget é uma propriedade específica do “getter” e o argumento fset é uma propriedade específica do “setter”. Seu uso é simples, como pode ser visto abaixo:</p>
+<p>Esses métodos criados são utilizados para prover acesso aos atributos. Exemplo:</p>
 
 <pre><code class="language-python">c.setLargural(2)
-print c.getLargura()
+print (c.getLargura())
+</code></pre>
+
+<p>O que modifica a largura da instância c para 2.</p>
+
+<p>Agora o property é um atributo de classe para promover o get e o set. O argumento fget é uma propriedade específica do “getter” e o argumento fset é uma propriedade específica do “setter”. Seu uso é simples, como pode ser visto abaixo:</p>
+
+<pre><code class="language-python">c.setLargura(2)
+print (c.getLargura())
 //o que seria equivalente utilizando property a:
 c.largura = 2
 print (c.largura)
@@ -159,15 +167,16 @@ print (c.largura)
   return Retangulo(self.largura + c.largura, self.comprimento + c.comprimento)
 </code></pre>
 
-<p>Assim quando utilizamos uma soma ele vai executar as ações definidas acima. Além desses podemos fazer para subtração <strong>sub</strong> e para multiplicação <strong>mul</strong>.
-Temos também em python métodos estatísticos. Eles são definidos da seguinte forma:</p>
+<p>Assim quando utilizamos uma soma ele vai executar as ações definidas acima. Além desses podemos fazer para subtração <code>__sub__</code> e para multiplicação <code>__mul__</code>.</p>
+
+<p>Temos também em python métodos estatísticos. Eles são definidos da seguinte forma:</p>
 
 <pre><code class="language-python">@staticmethod
   def main(*argv):
     print (&quot;oi&quot;)
 </code></pre>
 
-<h3 id="4-classes-aninhadas">4. Classes Aninhadas</h3>
+<h2 id="classes-aninhadas">Classes Aninhadas</h2>
 
 <p>Em python podemos definir uma classe dentro de outra. Dessa forma elas são conhecidas como aninhadas. Conforme o exemplo:</p>
 
@@ -189,12 +198,13 @@ Temos também em python métodos estatísticos. Eles são definidos da seguinte 
 obj.f()
 </code></pre>
 
-<h3 id="5-herança">5. Herança</h3>
+<h2 id="herança"> Herança</h2>
 
 <p>Primeiramente, o que seria o conceito de herança dentro do desenvolvimento orientado a objetos?</p>
 
-<p>Herança é o conceito no qual, você cria uma nova classe a partir de uma classe já existente. Herdando seus atributos e métodos.
-Isso ajuda você a escrever menos códigos repetitivos, por exemplo, quando temos bases, já vieram diversos atributos considerados úteis para uso em cada tipo de variável. Essa foi uma herança de object. Agora vamos ver como utilizá-la em python:</p>
+<p>Herança é o conceito no qual, você cria uma nova classe a partir de uma classe já existente. Herdando seus atributos e métodos.</p>
+
+<p>Isso ajuda você a escrever menos códigos repetitivos, por exemplo, quando temos bases, já vieram diversos atributos considerados úteis para uso em cada tipo de variável. Essa foi uma herança de object. Agora vamos ver como utilizá-la em python:</p>
 
 <pre><code class="language-python">class Pessoa(object):
   FEMALE = 0
@@ -228,7 +238,7 @@ class Nada3(Nada1, Nada2):
   pass
 </code></pre>
 
-<h3 id="6-exceções">6. Exceções</h3>
+<h2 id="exceções"> Exceções</h2>
 
 <p>Em python temos um objeto Exception que pode ser definido uma ação quando ocorre uma exceção. Por exemplo:</p>
 
@@ -247,7 +257,7 @@ def s():
 
 <p>Os alimentadores da exceção são definidos usando um bloco try: O corpo do bloco try está executado qualquer um até que uma exceção esteja levantada ou até que termine normalmente. Um ou mais alimentadores de exceção seguem em um bloco try. Cada alimentador de exceção consiste na cláusula que especifica as exceções a serem travadas, e um bloco do código, que é executado quando a exceção ocorre. Quando o corpo do bloco try levanta uma exceção para que uma exceção está definida, o controle é transferido ao corpo do alimentador da exceção.</p>
 
-<h3 id="7-recomendações">7. Recomendações</h3>
+<h2 id="recomendações">Recomendações</h2>
 
 <p><a href="http://www.cafepy.com/article/python_types_and_objects/python_types_and_objects.html">Python Types and Objects</a> de Shalabh Chaturvedi</p>
 
@@ -281,7 +291,7 @@ def s():
 
 <p><a href="http://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/">Understanding Python metaclasses</a> by Ionel C. Mărieș</p>
 
-<h3 id="8-recomendações-de-livros-para-data-science-em-python">8. Recomendações de livros para data science em python</h3>
+<h2 id="recomendações-de-livros-para-data-science-em-python">Recomendações de livros para data science em python</h2>
 
 <p><a href="https://github.com/donnemartin/data-science-ipython-notebooks">Página do Github com diversos livros para data science em python</a>, spoiler, estão em inglês. :p</p>
 </div>
