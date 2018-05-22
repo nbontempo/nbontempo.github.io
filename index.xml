@@ -6,10 +6,20 @@
     <description>Recent content on Nicolas Bontempo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Jul 2017 16:38:04 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://nickbom.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Determinação - Como mudar sua vida para conquistar seus objetivos</title>
+      <link>http://nickbom.github.io/posts/determinacao/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/determinacao/</guid>
+      <description>Uma coisa que sempre acreditei em toda minha vida, quem você foi não determina quem você é hoje. Mas também acredito que quem você é hoje, vai determinar quem você é no futuro.
+Todos os dias temos pensamentos sobre o futuro, conforme as experiências de nossa vida, melhoramos nossa maneira de pensar. O que somos atualmente é uma questão do que fomos, apesar de estarmos tentando ou não, estamos sempre criando um futuro para nós mesmos.</description>
+    </item>
     
     <item>
       <title>Worflow com o Git - Sugestões de uso</title>
@@ -135,6 +145,15 @@ Eu criei esse blog porque em meio aos meus estudos sempre criava textos buscando
     </item>
     
     <item>
+      <title>Criando hábitos</title>
+      <link>http://nickbom.github.io/tarefas/</link>
+      <pubDate>Tue, 19 May 2015 20:16:29 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/tarefas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Sobre o autor</title>
       <link>http://nickbom.github.io/sobre/</link>
       <pubDate>Tue, 19 May 2015 20:16:29 -0300</pubDate>
@@ -142,7 +161,7 @@ Eu criei esse blog porque em meio aos meus estudos sempre criava textos buscando
       <guid>http://nickbom.github.io/sobre/</guid>
       <description>Meu nome é Nicolas Bontempo. Sou graduado pela Universidade Federal de Alfenas em Ciência da Computação. Sou um desenvolvedor apaixonado, interessado em desenvolvimento web, otimização e inteligência artificial.
 Tenho experiências diversas com planejamento, arquitetura e desenvolvimento de sistemas.
-Minhas Habilidades: Trabalhei com:</description>
+Minhas Habilidades Trabalhei com</description>
     </item>
     
   </channel>

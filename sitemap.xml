@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nickbom.github.io/posts/determinacao/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://nickbom.github.io/posts/git/</loc>
     <lastmod>2017-07-20T16:38:04-03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -87,6 +94,13 @@
   </url>
   
   <url>
+    <loc>http://nickbom.github.io/tarefas/</loc>
+    <lastmod>2015-05-19T20:16:29-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://nickbom.github.io/sobre/</loc>
     <lastmod>2015-05-19T20:16:29-03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -124,6 +138,13 @@
   <url>
     <loc>http://nickbom.github.io/tags/depend%C3%AAncias/</loc>
     <lastmod>2016-11-26T16:37:45-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/determina%C3%A7%C3%A3o/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -193,14 +214,14 @@
   
   <url>
     <loc>http://nickbom.github.io/</loc>
-    <lastmod>2017-07-20T16:38:04-03:00</lastmod>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nickbom.github.io/posts/</loc>
-    <lastmod>2017-07-20T16:38:04-03:00</lastmod>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
