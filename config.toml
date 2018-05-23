@@ -1,0 +1,29 @@
+baseURL = "http://nickbom.github.io/"
+languageCode = "en-us"
+title = "Nicolas Bontempo"
+subtitle = "Código, analise de dados, backend e outras curiosidades do mundo de TI."
+theme = "hugo-paper"
+disqusShortname = "nicolasbontempo"
+googleAnalytics = "UA-71553462-1"
+staticDir = ["static"]
+
+[params]
+  author = "Nicolas Bontempo"
+  description = "Código, analise de dados, backend e outras curiosidades do mundo de TI."
+  comments = true
+[taxonomies]
+  tag = "tags"
+[menu]
+  [[menu.main]]
+    name = "Linkedin"
+    pre = "<i class='fa fa-road'></i>"
+    url = "https://www.linkedin.com/in/nicolasbontempo"
+  [[menu.main]]
+    name = "Github"
+    pre = "<i class='fa fa-road'></i>"
+    url = "https://github.com/nickbom"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
