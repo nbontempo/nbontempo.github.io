@@ -5,11 +5,11 @@ draft: false
 tags: ["Determinação"]
 ---
 
-Uma coisa que sempre acreditei foi que, quem você foi não determina quem você é hoje. Mas também acredito que suas escolhas e ações no presente, vão determinar quem você será no futuro.
+As suas escolhas e ações no presente, vão determinar quem você será no futuro.
 
 Todos os dias temos pensamentos sobre o futuro e conforme as experiências de nossas vidas, melhoramos nossa maneira de pensar. Apesar de estarmos tentando ou não, estamos sempre criando um futuro para nós mesmos.
 
-Você consegue imaginar o seu eu "ideal"? Você está no processo de alcança-lo?
+Você consegue imaginar o seu eu "ideal"? Você está no processo de alcançá-lo?
 
 # Decidir quem você quer ser no futuro importa MUITO
 
