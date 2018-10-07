@@ -17,8 +17,8 @@
       <pubDate>Sun, 09 Sep 2018 16:33:49 -0300</pubDate>
       
       <guid>http://nickbom.github.io/posts/2018/1-introduction-pipeline/</guid>
-      <description>Hello Guys, recently I changed a job going to a new challenge into Take, in this new challenge I&amp;rsquo;m confronted with a highly concurrent system with millions of users per day. From this, I&amp;rsquo;m studying parts of the stack which Dataflow is a big part. This is the start of my resume mostly provided by the study of the documentation and some coding.
-Processing Pipelines (Dataflow) - Introduction The library Dataflow provides several functions to intensive processing.</description>
+      <description>Hello Guys, recently I changed a job going to a new challenge into Take. From this, I&amp;rsquo;m studying parts of the stack which Dataflow is a big part. This is the start of my resume mostly provided by the study of the documentation and some coding.
+Processing Pipelines (Dataflow) - Introduction The library Dataflow provides several functions to intensive processing. When you develop some logic using the concept of pipelines, basically you are creating steps of processing called blocks.</description>
     </item>
     
     <item>
