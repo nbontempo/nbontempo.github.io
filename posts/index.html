@@ -79,22 +79,6 @@
 
 <article class="post post-entry">
   <header class="post-header">
-      <h2 class="post-title">Strategies to pipeline control</h2>
-  </header>
-  <footer class="post-footer">
-    <p class="post-meta">14/09/2018</p>
-    <div style="color:grey; font-size:16px;"Uma grande ideia><strong>Tags:</strong> <a href="/tags/dataflow">dataflow</a> <a href="/tags/pipeline">pipeline</a> </div>
-  </footer>
-  <p class="post-summary">The Circuit Breaker I have a consumer that connect to a web service that consume, when the web service is not reachable, this is no problem because the consumer will continue to receive the commands and will retry for each 20 seconds the connection. Because of it, the consumer always will take 20 seconds for failure, which can create more awaits and the whole system could suffer.
-Then the circuit breaker come along, when a configured percentage of errors are thrown the circuit breaker is open, once it’s open he will just generate the same exception that tripped the circuit breaker in the first place and it will do so for a configured period of time....</p>
-  <a class="post-link" href="http://nickbom.github.io/posts/2018/2-strategies-control-pipeline/"></a>
-</article>
-
-
-
-
-<article class="post post-entry">
-  <header class="post-header">
       <h2 class="post-title">Processing Pipelines (Dataflow) - Introduction</h2>
   </header>
   <footer class="post-footer">
@@ -215,6 +199,23 @@ Basicamente o burnout surge como consequência de algum estresse, normalmente cr
   <p class="post-summary">Decidi revisar um pouco a matéria de redes, espero que forme um conteúdo valoroso para todos, assim como é para mim.
 Redes Computadores se comunicam (trocam dados) com o objetivo de gerar valor para os dois lados, cada lado da rede precisa de alguma coisa e por isso estão comunicando. Por instância, você chama o Facebook para conversar com seus amigos e o Facebook responde para ganhar dinheiro com propaganda....</p>
   <a class="post-link" href="http://nickbom.github.io/posts/introducao-redes/"></a>
+</article>
+
+
+
+
+<article class="post post-entry">
+  <header class="post-header">
+      <h2 class="post-title">O inferno das dependências</h2>
+  </header>
+  <footer class="post-footer">
+    <p class="post-meta">26/11/2016</p>
+    <div style="color:grey; font-size:16px;"Uma grande ideia><strong>Tags:</strong> <a href="/tags/depend%C3%AAncias">dependências</a> <a href="/tags/bibliotecas">bibliotecas</a> <a href="/tags/frameworks">frameworks</a> </div>
+  </footer>
+  <p class="post-summary">Ferramentas, bibliotecas e frameworks que usamos hoje para construir nossas aplicações web são drasticamente diferentes daquelas usadas a poucos anos atrás.
+Em poucos anos, muitas dessas tecnologias mudarão novamente. Mesmo assim, muitos de nós utilizamos essas tecnologias como uma parte central, inseparável dos nossos aplicativos.
+Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem ficar inalteradas para sempre. Só que elas não vão e esse é o problema....</p>
+  <a class="post-link" href="http://nickbom.github.io/posts/inferno-dependencias/"></a>
 </article>
 
 

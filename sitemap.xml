@@ -10,13 +10,6 @@
   </url>
   
   <url>
-    <loc>http://nickbom.github.io/posts/2018/2-strategies-control-pipeline/</loc>
-    <lastmod>2018-09-14T16:33:49-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://nickbom.github.io/posts/2018/1-introduction-pipeline/</loc>
     <lastmod>2018-09-09T16:33:49-03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -151,7 +144,7 @@
   
   <url>
     <loc>http://nickbom.github.io/tags/dataflow/</loc>
-    <lastmod>2018-09-14T16:33:49-03:00</lastmod>
+    <lastmod>2018-09-09T16:33:49-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -256,7 +249,7 @@
   
   <url>
     <loc>http://nickbom.github.io/tags/pipeline/</loc>
-    <lastmod>2018-09-14T16:33:49-03:00</lastmod>
+    <lastmod>2018-09-09T16:33:49-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
