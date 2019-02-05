@@ -5,7 +5,7 @@ draft: false
 tags: ["dataflow", "pipeline"]
 ---
 
-Hello Guys, recently I changed a job going to a new challenge into [Take](https://take.net/). From this, I'm studying parts of the stack which Dataflow is a big part. This is the start of my resume mostly provided by the study of the documentation and some coding.
+Hello Guys, recently I changed a job going to a new challenge into [Take](https://take.net/). From this, I'm studying parts of the stack which Dataflow is a big part. This is the start of my summary mostly provided by the study of the documentation and some coding.
 
 # Processing Pipelines (Dataflow) - Introduction
 
