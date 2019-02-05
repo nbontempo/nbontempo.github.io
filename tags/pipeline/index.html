@@ -64,7 +64,23 @@
 
 <article class="post post-entry">
   <header class="post-header">
-      <h2 class="post-title"><span class="welcome-emoji">🆕</span>Processing Pipelines (Dataflow) - Introduction</h2>
+      <h2 class="post-title">Strategies to pipeline control</h2>
+  </header>
+  <footer class="post-footer">
+    <p class="post-meta">14/09/2018</p>
+    <div style="color:grey; font-size:16px;"Uma grande ideia><strong>Tags:</strong> <a href="/tags/dataflow">dataflow</a> <a href="/tags/pipeline">pipeline</a> </div>
+  </footer>
+  <p class="post-summary">The Circuit Breaker I have a consumer that connect to a web service that consume, when the web service is not reachable, this is no problem because the consumer will continue to receive the commands and will retry for each 20 seconds the connection. Because of it, the consumer always will take 20 seconds for failure, which can create more awaits and the whole system could suffer.
+Then the circuit breaker come along, when a configured percentage of errors are thrown the circuit breaker is open, once it’s open he will just generate the same exception that tripped the circuit breaker in the first place and it will do so for a configured period of time....</p>
+  <a class="post-link" href="http://nickbom.github.io/posts/2018/2-strategies-control-pipeline/"></a>
+</article>
+
+
+
+
+<article class="post post-entry">
+  <header class="post-header">
+      <h2 class="post-title">Processing Pipelines (Dataflow) - Introduction</h2>
   </header>
   <footer class="post-footer">
     <p class="post-meta">9/09/2018</p>
@@ -79,7 +95,7 @@ Processing Pipelines (Dataflow) - Introduction The library Dataflow provides sev
 
 </main>
 <footer class="footer">
-  <span>&copy; 2015-2018 Nicolas Bontempo 🎉</span>
+  <span>&copy; 2015-2019 Nicolas Bontempo 🎉</span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

@@ -6,10 +6,20 @@
     <description>Recent content in Pipeline on Nicolas Bontempo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Sep 2018 16:33:49 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 14 Sep 2018 16:33:49 -0300</lastBuildDate>
     
 	<atom:link href="http://nickbom.github.io/tags/pipeline/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Strategies to pipeline control</title>
+      <link>http://nickbom.github.io/posts/2018/2-strategies-control-pipeline/</link>
+      <pubDate>Fri, 14 Sep 2018 16:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/2018/2-strategies-control-pipeline/</guid>
+      <description>The Circuit Breaker I have a consumer that connect to a web service that consume, when the web service is not reachable, this is no problem because the consumer will continue to receive the commands and will retry for each 20 seconds the connection. Because of it, the consumer always will take 20 seconds for failure, which can create more awaits and the whole system could suffer.
+Then the circuit breaker come along, when a configured percentage of errors are thrown the circuit breaker is open, once it&amp;rsquo;s open he will just generate the same exception that tripped the circuit breaker in the first place and it will do so for a configured period of time.</description>
+    </item>
     
     <item>
       <title>Processing Pipelines (Dataflow) - Introduction</title>

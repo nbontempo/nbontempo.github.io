@@ -6,10 +6,30 @@
     <description>Recent content in Posts on Nicolas Bontempo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Sep 2018 16:33:49 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 04 Feb 2019 16:33:49 -0300</lastBuildDate>
     
 	<atom:link href="http://nickbom.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Newsletter - 2019 / 1</title>
+      <link>http://nickbom.github.io/posts/2019/1-newsletter/</link>
+      <pubDate>Mon, 04 Feb 2019 16:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/2019/1-newsletter/</guid>
+      <description>This is my first newsletter. The idea was to provide some useful links to great articles that I found on the web. I expect that you appreciate. One or another is in PT-BR that is my main language, sorry for the lack of pattern.
+ Great podcast that started my year, this audio provides a great experience to think about your life and in which path you are following. Café Brasil - Quando eu tiver 64</description>
+    </item>
+    
+    <item>
+      <title>Strategies to pipeline control</title>
+      <link>http://nickbom.github.io/posts/2018/2-strategies-control-pipeline/</link>
+      <pubDate>Fri, 14 Sep 2018 16:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/2018/2-strategies-control-pipeline/</guid>
+      <description>The Circuit Breaker I have a consumer that connect to a web service that consume, when the web service is not reachable, this is no problem because the consumer will continue to receive the commands and will retry for each 20 seconds the connection. Because of it, the consumer always will take 20 seconds for failure, which can create more awaits and the whole system could suffer.
+Then the circuit breaker come along, when a configured percentage of errors are thrown the circuit breaker is open, once it&amp;rsquo;s open he will just generate the same exception that tripped the circuit breaker in the first place and it will do so for a configured period of time.</description>
+    </item>
     
     <item>
       <title>Processing Pipelines (Dataflow) - Introduction</title>

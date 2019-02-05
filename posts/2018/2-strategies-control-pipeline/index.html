@@ -6,10 +6,10 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <title>Burnout (o que é e como lidar com esse problema) - Nicolas Bontempo</title>
+  <title>Strategies to pipeline control - Nicolas Bontempo</title>
   
-  <meta name="description" content="Na área de ciência da computação as pessoas tem uma tendência em sentir os sintomas do burnout, no entanto a grande maioria sequer o conhece. Decidi escrever sobre o problema até para melhor esclarecer esse problema para os meus colegas e mostrar como resolvê-lo de uma forma inteligente.
-Basicamente o burnout surge como consequência de algum estresse, normalmente criado por excessos no trabalho ou faculdade, seja de responsabilidades ou mesmo de pressão em certas tarefas.">
+  <meta name="description" content="The Circuit Breaker I have a consumer that connect to a web service that consume, when the web service is not reachable, this is no problem because the consumer will continue to receive the commands and will retry for each 20 seconds the connection. Because of it, the consumer always will take 20 seconds for failure, which can create more awaits and the whole system could suffer.
+Then the circuit breaker come along, when a configured percentage of errors are thrown the circuit breaker is open, once it&rsquo;s open he will just generate the same exception that tripped the circuit breaker in the first place and it will do so for a configured period of time.">
   <meta name="author" content="Nicolas Bontempo">
   
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
@@ -52,37 +52,42 @@ Basicamente o burnout surge como consequência de algum estresse, normalmente cr
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">Burnout (o que é e como lidar com esse problema)</h1>
-    <p class="post-meta">Nicolas Bontempo · 29/03/2017<div style="color:grey; font-size:16px;">
+    <h1 class="post-title">Strategies to pipeline control</h1>
+    <p class="post-meta">Nicolas Bontempo · 14/09/2018<div style="color:grey; font-size:16px;">
         <strong>Tags:</strong> 
-        <a href="/%20/tags/%20trabalho">Trabalho</a> 
+        <a href="/%20/tags/%20dataflow">dataflow</a> 
+        <a href="/%20/tags/%20pipeline">pipeline</a> 
       </div>
     </p>
   </header>
-  <div class="post-content"><p>Na área de ciência da computação as pessoas tem uma tendência em sentir os sintomas do <em>burnout</em>, no entanto a grande maioria sequer o conhece. Decidi escrever sobre o problema até para melhor esclarecer esse problema para os meus colegas e mostrar como resolvê-lo de uma forma inteligente.</p>
+  <div class="post-content">
 
-<p>Basicamente o <em>burnout</em> surge como consequência de algum estresse, normalmente criado por excessos no trabalho ou faculdade, seja de responsabilidades ou mesmo de pressão em certas tarefas. Os principais sintomas são exaustão emocional, avaliação negativa de si mesmo, depressão e insensibilidade com relação a quase tudo e todos que tende a ser uma defesa emocional. Assim, ao não se sensibilizar a pessoa estaria criando uma parede para afastar a pressão e os problemas do trabalho, o que por sua vez tende entre outros fatores ao isolamento e ao acúmulo de estresse.</p>
+<h1 id="the-circuit-breaker">The Circuit Breaker</h1>
 
-<p><em>Burnout</em> é geralmente desenvolvido como resultado de um período de esforço excessivo no trabalho ou faculdade com intervalos muito pequenos para recuperação. Sabe a sensação ruim gerada por um final de um domingo? Apesar disto ser normal, pode ser um bom exemplo para definir o que estamos querendo dizer.</p>
+<p>I have a consumer that connect to a web service that consume, when the web service is not reachable, this is no problem because the consumer will continue to receive the commands and will retry for each 20 seconds the connection. Because of it, the consumer always will take 20 seconds for failure, which can create more awaits and the whole system could suffer.</p>
 
-<p>Conheci colegas durante o período de faculdade que passaram por crises de <em>burnout</em> e resolveram isso de uma forma muito simples, ignorando todos os problemas e apenas se afundando em outros afazeres que não gerassem estresse ou pressão, como jogos online ou festas. Apesar de ser eficiente para lidar com o <em>burnout</em>, esse método pode prejudicar o desempenho acadêmico ou mesmo fazer com que o estudante desista do curso. Além disso, quando se está trabalhando é muito mais complicado escapar das responsabilidades, principalmente se você for o fundador de alguma empresa. Sentir <em>burnout</em> é muito comum, mas lidar com o problema é muito difícil nessa situação.</p>
+<p>Then the circuit breaker come along, when a configured percentage of errors are thrown the circuit breaker is open, once it&rsquo;s open he will just generate the same exception that tripped the circuit breaker in the first place and it will do so for a configured period of time. Then the failure happen immediatly and not after 20 seconds.</p>
 
-<p>Então pense em <strong>técnicas para enfrentar o burnout</strong>, aliviando a carga de estresse dos seus afazeres. Como por exemplo:</p>
+<h1 id="the-rate-limiter">The Rate Limiter</h1>
 
-<ul>
-<li>A divisão das suas atividades prazerosas e não prazerosas</li>
-<li>Tentar equilibrar a sua rotina para não se desgastar demais</li>
-<li>Estar sempre fazendo um saldo a respeito de si mesmo e de como enxergar as coisas, pois muitas vezes o problema está na maneira como interpretamos a situação</li>
-</ul>
+<p>The rate limiter limits the number of messages the consumer will process during a period of time. For example, the consumer is connected to a web service, this web service only can process 10 messages for each second, in that way my consumer can&rsquo;t receive more than 10 messages for each second, if he receives 100 messages in one second the web service will not be able to handle that amount of messages.</p>
 
-<p>E tenha consciência de que as pessoas são diferentes e pensam de maneira diferente. Assim, uma técnica que funcione para outra pessoa pode não funcionar para você.</p>
+<p>There is several ways to solve this problem, one can be reduce the speed of connections which are requesting too quickly, this is used by rabbit mq that is called &ldquo;Flow Control&rdquo; in this tool.</p>
+
+<h1 id="the-latest-filter">The Latest Filter</h1>
+
+<p>The latest filter is used to capture tha latest value of a certain context and make that avaible for future reference.</p>
 </div>
   <footer class="post-footer">
     
     <ul class="post-tags">
       
       <li>
-        <a href="/tags/trabalho/">Trabalho</a>
+        <a href="/tags/dataflow/">dataflow</a>
+      </li>
+      
+      <li>
+        <a href="/tags/pipeline/">pipeline</a>
       </li>
       
     </ul>
