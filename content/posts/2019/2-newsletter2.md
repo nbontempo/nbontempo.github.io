@@ -1,6 +1,6 @@
 ---
 title: "Newsletter - 2019 / 2"
-date: 2019-11-08T16:33:49-03:00
+date: 2019-08-11T16:33:49-03:00
 draft: false
 tags: ["Newsletter"]
 ---
