@@ -13,7 +13,7 @@ This is my first newsletter. The idea was to provide some useful links to great 
 
 - Article of one friend, he shows the benefits of using functional programming on javascript and how that can increase your productivity and create a more readable code **[Como aplicar os conceitos da programação funcional no Javascript](https://take.net/blog/4devs/programacao-funcional-no-javascript/)**
 
-- One introductory article about microservices that talks about all the hyped ideas about some problem that is found on the monolithic system and can be solved with microservices **[Os primeiros passos na arquitetura de Microservices](http://www.ramonduraes.net/2019/01/14/os-primeiros-passos-na-arquitetura-de-microservices/)**
+- Article that introduce the microservice architecture **[Os primeiros passos na arquitetura de Microservices](http://www.ramonduraes.net/2019/01/14/os-primeiros-passos-na-arquitetura-de-microservices/)**
 
 - **[The Problem You Solve Is More Important Than The Code You Write](https://levelup.gitconnected.com/the-problem-you-solve-is-more-important-than-the-code-you-write-d0e5493132c6)**
 

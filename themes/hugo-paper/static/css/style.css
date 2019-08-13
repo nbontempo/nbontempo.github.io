@@ -298,6 +298,7 @@ pre, code {
 .post-content {
   padding-top: 30px;
   word-wrap: break-word;
+  padding-bottom: 10px;
 }
 .post-content h1,
 .post-content h2 {
