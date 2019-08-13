@@ -5,7 +5,7 @@ draft: false
 tags: ["Newsletter"]
 ---
 
-Starting the second semester with the right foot, what I'm studying and articles that I found interesting.
+Starting the second semester with the right foot one new post with some interesting articles, this articles are what I'm studying right now and found interesting.
 
 - Centralization, structuring decision making in the team - How can affect the team performance and advantages and disadvantages. In a centralized authority we have a less team interdependence, task-focused on execution, low complexity tasks, high diversity in experiences. In a decentralized, we have greater team interdependence, creativity focused tasks, high complexity tasks, low diversity in experience. [Centralization: How to Structure Decision Making in the Team](https://pt.coursera.org/lecture/leading-teams/02-03-centralization-how-to-structure-decision-making-in-the-team-kZLMZ)
 
