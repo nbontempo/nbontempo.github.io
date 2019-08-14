@@ -13,10 +13,10 @@
     
     <item>
       <title>Introdução a Micro Serviços</title>
-      <link>http://nickbom.github.io/posts/introducao-micro-servicos/</link>
+      <link>http://nickbom.github.io/posts/2016/introducao-micro-servicos/</link>
       <pubDate>Sun, 13 Nov 2016 16:37:25 -0300</pubDate>
       
-      <guid>http://nickbom.github.io/posts/introducao-micro-servicos/</guid>
+      <guid>http://nickbom.github.io/posts/2016/introducao-micro-servicos/</guid>
       <description>Hoje, o ecossistema tecnológico muda incessantemente, novas linguagens, estruturas e soluções surgem a todo momento. Usuários esperam que as empresas entreguem valor rápido e frequente. Aplicações com a arquitetura monolítica não sabem lidar com as mudanças rápidas das condições de mercado. Então temos os micro serviços para resolver esse problema, que é um estilo de arquitetura de software, ideal para o desenvolvimento de aplicações mais escaláveis e dinâmicas.
 O que é um monólito Micro Serviços são o oposto a arquitetura monolítica tradicional.</description>
     </item>

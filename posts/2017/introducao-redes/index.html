@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Introdução de redes - Nicolas Bontempo</title>
+  
+  <meta name="description" content="Decidi revisar um pouco a matéria de redes, espero que forme um conteúdo valoroso para todos, assim como é para mim.
+Redes Computadores se comunicam (trocam dados) com o objetivo de gerar valor para os dois lados, cada lado da rede precisa de alguma coisa e por isso estão comunicando. Por instância, você chama o Facebook para conversar com seus amigos e o Facebook responde para ganhar dinheiro com propaganda.">
+  <meta name="author" content="Nicolas Bontempo">
+  
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon.ico">
+  
+  <meta name="generator" content="Hugo 0.45">
+  
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Nicolas Bontempo">
+</head>
+<body class="single">
+  <header class="header">
+    
+    <p class="title"><a href="/"><span>🐱‍👓</span>Nicolas Bontempo</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="https://github.com/nickbom">Github</a>
+        </li>
+        
+        <li class="">
+          <a href="https://www.linkedin.com/in/nicolasbontempo">Linkedin</a>
+        </li>
+        
+        <li class="">
+          <a href="/sobre/">Sobre o autor</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+    <h1 class="post-title">Introdução de redes</h1>
+    <p class="post-meta">Nicolas Bontempo · 03/03/2017<div style="color:grey; font-size:16px;">
+        <strong>Tags:</strong> 
+        <a href="/%20/tags/%20redes">redes</a> 
+        <a href="/%20/tags/%20introdu%C3%A7%C3%A3o">introdução</a> 
+      </div>
+    </p>
+  </header>
+  <div class="post-content">
+
+<p>Decidi revisar um pouco a matéria de redes, espero que forme um conteúdo valoroso para todos, assim como é para mim.</p>
+
+<h1 id="redes">Redes</h1>
+
+<p>Computadores se comunicam (trocam dados) com o objetivo de gerar valor para os dois lados, cada lado da rede precisa de alguma coisa e por isso estão comunicando. Por instância, você chama o Facebook para conversar com seus amigos e o Facebook responde para ganhar dinheiro com propaganda.</p>
+
+<p>Uma <strong>rede</strong> pode ser representada por um grafo o qual os vértices são máquinas de processamento e as arestas são os links de transmissão. Exemplos de redes incluem Internet, telefones, e até walkie-talkies.</p>
+
+<h2 id="protocolos">Protocolos</h2>
+
+<p>Fundamentalmente, sinais são transmitidos pelo espaço. Padrões definem o modo pelo qual a informação passa, primeiramente como bits, depois como conceitos de maior nível.</p>
+
+<p>Os padrões podem depender da existência de um padrão de nível inferior, formando uma <em>pilha de protocolos</em>. O <strong>modelo OSI</strong> é uma pilha teórica com as seguintes camadas:</p>
+
+<ul>
+<li>Física: transmite bits através de um meio (ex: DSL, 802.11),</li>
+<li>Ligação de dados: transmissão de frames principalmente através de nós adjacentes, para determinar o começo e o fim de uma mensagem (ex: Ethernet, MAC, PPP),</li>
+<li>Rede: transmissão de pacotes pelas rotas do grafo (ex: IP, NAT),</li>
+<li>Transporte: transmissão de segmentos, assim aplicações em ambos endpoints podem trocar mensagens com determinadas garantias de comfiabilidade (ex: TCP, UDP, ICMP (ping)),</li>
+<li>Sessão: configuração e reconhecimento dos endpoints através das mensagens,</li>
+<li>Apresentação: codificação dos dados (charset, compressão, encriptação) (ex: TLS, HTTP com MIME para alguma extensão),</li>
+<li>Aplicação: serialização das estruturas de dados (ex: HTTP (documentos), NTP (tempo), SMTP (email), FTP (arquivos)).</li>
+</ul>
+
+<p>Agora vamos ver uma pilha baseada na teórica OSI.</p>
+
+<h3 id="http">HTTP</h3>
+
+<p><strong>HyperText Transfer Protocol</strong> (<a href="https://tools.ietf.org/html/rfc2616">HTTP</a>) é um protocolo da camada de aplicação designed para transmissão de documentos por cliente-servidor. Por instância, para requisitar a página principal de um servidor HTTP pelo seu computador:</p>
+
+<pre><code>GET / HTTP/1.1
+Host: localhost:1234
+Accept: text/html
+</code></pre>
+
+<p>(Cada nova linha é constituída por dois bytes: 0x0D e 0x0A, CR-LF; ele termina com duas novas linhas). O servidor pode responder:</p>
+
+<pre><code>HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Sat, 31 Dec 2016 15:31:45 GMT
+Connection: keep-alive
+Transfer-Encoding: chunked
+
+7E
+&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt; This is HTML &lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+
+0
+</code></pre>
+
+<p>Essa resposta inclue o arquivo <a href="https://html.spec.whatwg.org/multipage/">HTML</a> que o cliente HTTP (usualmente, o browser, como o Firefox ou o Google Chrome) vai ler as instruções de como criar a página, o que determina os pixels que devem ser mostrados, as animações que devem ser mostradas, as interações a serem executadas quando um usuário se move pela página ou clica o mouse, o som a ser reproduzido, etc.</p>
+
+<p>Todas as requisições têm a primeira linha com o método (<code>GET</code>), um caminho (<code>/</code>), e um protocolo (<code>HTTP/1.1</code>), seguidos pelo cabeçalho mapeando nomes de cabeçalhos (<code>Accept</code>) para o seu valor (<code>text/html</code>). As solicitações também podem levar dados.</p>
+
+<p>Respostas tem a primeira linha com o protocolo (<code>HTTP/1.1</code>), um código (<code>200 OK</code>; código iniciado com 1 são informacionais, 2 para sucesso, 3 para redirecionamento, 4 para erro no cliente, 5 para erro no servidor). Respostas usualmente trazem dados (no exemplo, um código HTML), e também possui o cabeçalho, o qual explica quais são os dados, e qual o seu encode (charset, compressão), que horas são, se está usando cache, como guardar informações de sessão (através de cookies) e outras coisas.</p>
+
+<p>Como mencionado, HTTP inclui uma camada de apresentação &ldquo;protocolos&rdquo; nos cabeçalhos, como o <strong>Multipurpose Internet Mail Extensions</strong> (<a href="https://tools.ietf.org/html/rfc2045">MIME</a>) no <code>Content-Type</code>, para especificar o arquivo <code>&lt;tipo&gt;/&lt;subtipo&gt;</code> (ex. <code>text/plain</code>), ou se recursivamente contém subarquivos com <code>multipart/mixed</code> ou <a href="https://tools.ietf.org/html/rfc7578"><code>multipart/form-data</code></a>, em que cada subarquivo especifica o seu próprio cabeçalho:</p>
+
+<pre><code>POST /upload HTTP/1.1
+Host: localhost:1234
+Content-Length: 882
+Content-Type: multipart/form-data; boundary=random0ACxeUx4Nxqy3roVtMxrAw
+
+--random0ACxeUx4Nxqy3roVtMxrAw
+Content-Disposition: form-data; name=&quot;name-of-first-part&quot;
+Content-Type: text/plain
+
+This first file contains normal plain text.
+--random0ACxeUx4Nxqy3roVtMxrAw
+Content-Disposition: form-data; name=&quot;multiple-images&quot;; filename=&quot;image.svg&quot;
+Content-Type: image/svg+xml; charset=UTF-8
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100&quot; height=&quot;20&quot;&gt;
+  &lt;text x=&quot;10&quot; y=&quot;15&quot;&gt;This is an image&lt;/text&gt;
+&lt;/svg&gt;
+--random0ACxeUx4Nxqy3roVtMxrAw
+Content-Disposition: form-data; name=&quot;multiple-images&quot;; filename=&quot;image.png&quot;
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAMSURBVBhXY2BgYAAAAAQAAVzN/2kAAAAASUVO
+RK5CYII=
+--random0ACxeUx4Nxqy3roVtMxrAw--
+</code></pre>
+
+<p>(Note o uso de base64 na image.png está depreciado; na vida real, ele seria substituido pelos dados binários diretamente.)</p>
+
+<p>HTTPS é similar ao HTTP, exceto por todo o fluxo de dados, incluindo o cabeçalho, é encriptado para previnir nós intermediários na rede de ler ou modificar o conteúdo, o qual é necessário quando transmitindo identificações ou informações bancarias, e para previnir ser passado como um tolo performando perigosos atos.</p>
+
+<h3 id="tcp">TCP</h3>
+
+<p><strong>Transmission Control Protocol</strong> (<a href="https://tools.ietf.org/html/rfc793">TCP</a>) é um protocolo da camada de transporte que garante que os segmentos são recebidos sem erros na ordem em que eles são enviados.
+Quando usado IP, ele corta os segmentos em pedaços que cabem em um pacote.</p>
+
+<ol>
+<li>O servidor inicia a ouvir uma porta.</li>
+<li>O cliente inicia uma conexão com SYN(número de sequenciamento).</li>
+<li>O servidor informa o cliente que recebeu com o SYN+ACK(número de confirmação).</li>
+<li>O cliente envia um ACK.</li>
+<li>O servidor e o cliente agora pode enviar uma série de pacotes entre eles, e eles enviam ACK para confirmar cada recebimento e se todos os pacotes prévios foram recebidos em ordem.</li>
+<li>O cliente envia um FIN(sem mais dados para enviar).</li>
+<li>O servidor envia um FIN+ACK (ou um ACK seguido por um FIN).</li>
+<li>O cliente envia um ACK. (A conexão permace aberta até dar time out.)</li>
+</ol>
+
+<p>Um cabeçalho TCP inclue:</p>
+
+<ul>
+<li>Porta de origim em 2 bytes,</li>
+<li>Porta de destino em 2 bytes,</li>
+<li>Número de sequenciamento 4 bytes:
+
+<ul>
+<li>Em um SYN, o qual é o número de sequenciamento inicial (ISN) escolhido randomicamente,</li>
+<li>ou pode ser (server ISN) + 1 + número de bytes enviado previamente, garantindo que os pacotes podem ser reordenados para obter o segmento inicial.</li>
+</ul></li>
+<li>Número de confirmação 4 bytes:
+
+<ul>
+<li>Em um SYN-ACK, esse é (cliente ISN) + 1, e número de sequenciamento do servidor é escolhido randomicamente,</li>
+<li>Em um ACK, esse é (server ISN) + número de bytes recebidos + 1, o qual é o próximo número de sequencia a ser recebedor pelo servidor.</li>
+</ul></li>
+<li>Offset dos dados 4 bits, o tamanho do cabeçalho TCP em palavras de 32-bit (padrão em 5),</li>
+<li>000 (reservado),</li>
+<li>Marcações(flags) em 9 bits: NS, CWR, ECE, URG (ponteiro de leitura urgente), ACK (numero de confirmação de receber dados ou SYN), PSH (enviar dados do buffer para a aplicação), RST (reset a conexão), SYN (sincronizar o número de sequenciamento, usado apenas no handshake inicial), FIN (fim dos dados, usado apenas no fim do handshake),</li>
+<li>tamanho da janela 2 bytes, possibilitando fluxo e controle dos dados,</li>
+<li>checksum 2 bytes para checar corrupção do cabeçalho ou dos dados,</li>
+<li>ponteiro urgente 2 bytes apontando para um número de sequencia,</li>
+</ul>
+
+<h3 id="ip">IP</h3>
+
+<p><strong>Internet Protocol</strong> (<a href="https://tools.ietf.org/html/rfc791">IP</a>) é um protocolo da camada de rede que garante que os pacotes irão para o destino correto mesmo passando por diversas máquinas pelo caminho.</p>
+
+<p>Além disso, corta o pacote em fragmentos que cabem dentro de um frame da camada de link.</p>
+
+<p>Fragmentar e reordenar o pacote para outro fim foi projetado para casos os quais o pacote precisa ser transmitido por um link, o qual não pode enviar todo o pacote (tipicamente, um valor máximo de tamanho para um fração na conexão ethernet ou quando o destino não tem memória o bastante para guardar o pacote).</p>
+
+<p>Assim, o TCP pode dividir os dados arbitrariamente em pacotes menores para caber em um frame ethernet, e a fragmentação diminui a segurança, já que a cauda dos fragmentos não guardam o cabeçalho TCP. Além disso, o caminho MTU (transporte maximo de unidade) descoberto (PMTUD) possibilita determinar o tamanho do frame na camada física através da rede. Como resultado, o IPV6 não habilita a fragmentação de pacotes com o caminho, necessitando que o envio seja em ambas as formas com seu tamanho correto (para TCP), ou em forma de fragmentos no tamanho correto (para UDP e ICMP, os quais não podem dividir os dados em multiplos pacotes).</p>
+
+<p>Note que pacotes podem ser perdidos, dusplicados, recebidos fora de ordem, ou corrompidos sem que a camada de IP note. O próprio TCP é responsável por previnir que isso não aconteça.</p>
+
+<p>Endereços IP segmentam a internet em cada vez menores sub-redes, as quais <strong>roteadores</strong> processam os pacotes dentro e através das redes. Isso pode manualmente mudar ou obtidos automaticamente pelo <strong>Protocolo de configuração do host</strong> (DHCP).</p>
+
+<p>Endereços IPv4 possuem 4 bytes, comumente escritos em decimais separados por pontos, ex. <code>192.168.0.200</code>.</p>
+
+<p>Endereços IPv6 possuem 16 bytes, os quais pares de bytes representam números hexadecimais separador por dois pontos, os quais zeros podem opcionalmente serem subtituidos por dois pontos duplos, ex. <code>ff02::1:ff00:0</code></p>
+
+<p>Alguns endereços IPs podem ser mapeados para um nome (ex, <code>google.com.br</code> → 201.17.165.177) utilizando o <strong>Domais name system</strong> (DNS), um sistema de nomeação para entidades da internet. Companhias que podem alocar novos domínios são conhecidos como registradores. Eles publicam as suas informações como arquivos de zonas, e possibilitam edição autenticada desses arquivos pelo domínio dos proprietários. [IP]: <a href="https://tools.ietf.org/html/rfc791">https://tools.ietf.org/html/rfc791</a></p>
+
+<p><em>Enquanto o HTTP requer o TCP, o qual requer IP, protocolos de layers mais baixos são usualmente insubstituíveis.</em></p>
+
+<h3 id="ethernet">Ethernet</h3>
+
+<p>Na camada do link, comunicação basicamente ocorre diretamente entre dois nós adjacentes.</p>
+
+<p>Dentro dos protocolos da camada de link, <strong>Ethernet</strong> (LAN, IEEE 802.3) é uma camada de link, protocolo para transmitir pacotes através de um fio entre duas máquinas.</p>
+
+<p>A Ethernet sobrevive graças a <strong>repetidores</strong> para transmitir dados por longas distâncias, já que a camada física usualmente possui cabos com comprimentos máximos. Diversas máquinas são conectadas a um repetidor, criando uma topologia de estrela. <strong>Pontes</strong> são máquinas inteligentes que se lembram do endereço MAC que enviou os dados e usam essa informação para fugir de envios de pacotes para máquinas que não são o destino de acordo com o pacote. <strong>Switches</strong> são máquinas programáveis inteligentes que detectam e bloqueiam pacotes corrompidos.</p>
+
+<p>Uma alternativa a Ethernet é a <strong>WiFi</strong> (WLAN, IEEE 802.11), o protocolo comum de wireless.</p>
+
+<h2 id="layouts-de-redes">Layouts de redes</h2>
+
+<p><strong>Distribuídos</strong> são sistemas os quais dependem de múltiplos pontos computacionais comunicando.</p>
+
+<p><strong>Cliente-servidor</strong> (Modelo Estrela) é uma arquitetura que possui uma unidade especial, o servidor, o qual recebe requests de diversas unidades computacionais (clientes), processa o request, e envia a resposta para cada request. Exemplo o HTTP.</p>
+
+<p><strong>Arquitetura em três camadas</strong> arquitetura que separa os nós em três tipos:
+- Camada de apresentação: lê os dados de entrada e mostra a interface de usuário (UI). Tipicamente, notebooks e celulares.
+- Camada de negócio: executas queries de usuários e move dados.
+- Camada de dados: gerencia os dados, tipicamente através de uma Criação-Leitura-Atualização-Remoção (CRUD), Application Programming Interfaces (APIs), tipicamente garantindo atomicidade-consistencia-isolação-durabilidade (ACID).</p>
+
+<p><strong>Arquitetura multi camada</strong> é quando a arquitetura em três camadas possui sub camadas.</p>
+
+<p><strong>Descentralizado</strong> arquitetura que tem a capacidade de perder qualquer nó e se manter. Ex. inclui Hash Tables Distribuidos (DHT).</p>
+
+<p><strong>Peer-to-peer</strong> (P2P) arquitetura que se sustenta com a perda de qualquer número de nós, enquanto existir um nó sempre vai existir uma rede. Ex. incluem Bittorrent, Bitcoin e alguns tipos de arquivos de sistema.</p>
+</div>
+  <footer class="post-footer">
+    
+    <ul class="post-tags">
+      
+      <li>
+        <a href="/tags/redes/">redes</a>
+      </li>
+      
+      <li>
+        <a href="/tags/introdu%C3%A7%C3%A3o/">introdução</a>
+      </li>
+      
+    </ul>
+    
+  </footer>
+  
+   
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_shortname = 'nicolasbontempo';
+    (function () { 
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+   
+</article>
+</main>
+<footer class="footer">
+  <span>&copy; 2015-2019 Nicolas Bontempo 🎉</span>
+</footer>
+<script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-71553462-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script data-no-instant>
+  hljs.initHighlightingOnLoad();
+  menuToggle();
+  InstantClick.on('change', function() {
+    var blocks = document.querySelectorAll('pre code');
+    for (var i = 0; i < blocks.length; i++) {
+      hljs.highlightBlock(blocks[i]);
+    }
+    menuToggle();
+  });
+  function menuToggle() {
+    var $toggle = document.querySelector('.menu-toggle');
+    if (!$toggle.offsetParent) {
+      return;
+    }
+    var $body = document.querySelector('body');
+    $toggle.addEventListener('click', function() {
+      $body.classList.toggle('noscroll');
+    }, false);
+  }
+</script>
+</body>
+</html>

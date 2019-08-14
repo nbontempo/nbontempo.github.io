@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Programação orientada a objetos com Python - Nicolas Bontempo</title>
+  
+  <meta name="description" content="Nesse guia você irá aprender os tipos fundamentais de python, funções e métodos, como definir uma classe, classes aninhadas, herança e exceções. Tudo o que é necessário para um bom inicio com python.
+Tipos Fundamentais Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos:">
+  <meta name="author" content="Nicolas Bontempo">
+  
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon.ico">
+  
+  <meta name="generator" content="Hugo 0.45">
+  
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Nicolas Bontempo">
+</head>
+<body class="single">
+  <header class="header">
+    
+    <p class="title"><a href="/"><span>🐱‍👓</span>Nicolas Bontempo</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="https://github.com/nickbom">Github</a>
+        </li>
+        
+        <li class="">
+          <a href="https://www.linkedin.com/in/nicolasbontempo">Linkedin</a>
+        </li>
+        
+        <li class="">
+          <a href="/sobre/">Sobre o autor</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+    <h1 class="post-title">Programação orientada a objetos com Python</h1>
+    <p class="post-meta">Nicolas Bontempo · 14/06/2015<div style="color:grey; font-size:16px;">
+        <strong>Tags:</strong> 
+        <a href="/%20/tags/%20python">python</a> 
+        <a href="/%20/tags/%20programa%C3%A7%C3%A3o-orientada-a-objetos">programação orientada a objetos</a> 
+      </div>
+    </p>
+  </header>
+  <div class="post-content">
+
+<p>Nesse guia você irá aprender os tipos fundamentais de python, funções e métodos, como definir uma classe, classes aninhadas, herança e exceções. Tudo o que é necessário para um bom inicio com python.</p>
+
+<h2 id="tipos-fundamentais">Tipos Fundamentais</h2>
+
+<p>Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos:</p>
+
+<ul>
+<li><p>Identificador</p></li>
+
+<li><p>Valor</p></li>
+
+<li><p>Tipo, todo objeto tem um tipo. O tipo ajuda a determinar que tipo de operações são possíveis com o objeto.</p></li>
+
+<li><p>Um ou mais bases. Uma base é similar a uma super classe.</p></li>
+</ul>
+
+<p>Exemplo:</p>
+
+<p><code>x = 2 &gt;&gt;&gt; type(x) &lt;type ‘int’&gt;</code></p>
+
+<p>Primeiramente temos uma variável inteira criada. Dentro dessa variável temos outro objeto int o qual vamos explorar mais profundamente. Quando chamamos type, ele apenas retorna o atributo de <code>__class__</code>, como podemos ver abaixo:</p>
+
+<p><code>type(type(x)) &lt;type ‘type’&gt;</code></p>
+
+<p>E como podemos ver, o objeto int é um objeto type, além disso, o atributo <code>__bases__</code> contém um objeto chamado object, como podemos ver abaixo:</p>
+
+<p><code>type(x).__bases__ (&lt;type ‘object’&gt;,)</code></p>
+
+<p>Depois de tudo, podemos ver que temos vários atributos relacionados com esse objetos quando chamando a função dir. Então, igual vimos TUDO é um objeto. Podemos utilizar isso como uma regra geral de python, TUDO é um objeto. Sim, tudo. Até métodos e funções.</p>
+
+<p><code>
+ dir(x) [‘__abs__’, ‘__add__’, ‘__and__’, ‘__class__’, ‘__cmp__’, ‘__coerce__’, ‘__delattr__’, ‘__div__’, ‘__divmod__’, ‘__doc__’, ‘__float__’, ‘__floordiv__’, ‘__format__’, ‘__getattribute__’, ‘__getnewargs__’, ‘__hash__’, ‘__hex__’, ‘__index__’, ‘__init__’, ‘__int__’, ‘__invert__’, ‘__long__’, ‘__lshift__’, ‘__mod__’, ‘__mul__’, ‘__neg__’, ‘__new__’, ‘__nonzero__’, ‘__oct__’, ‘__or__’, ‘__pos__’, ‘__pow__’, ‘__radd__’, ‘__rand__’, ‘__rdiv__’, ‘__rdivmod__’, ‘__reduce__’, ‘__reduce_ex__’, ‘__repr__’, ‘__rfloordiv__’, ‘__rlshift__’, ‘__rmod__’, ‘__rmul__’, ‘__ror__’, ‘__rpow__’, ‘__rrshift__’, ‘__rshift__’, ‘__rsub__’, ‘__rtruediv__’, ‘__rxor__’, ‘__setattr__’, ‘__sizeof__’, ‘__str__’, ‘__sub__’, ‘__subclasshook__’, ‘__truediv__’, ‘__trunc__’, ‘__xor__’, ‘bit_length’, ‘conjugate’, ‘denominator’, ‘imag’, ‘numerator’, ‘real’]
+</code></p>
+
+<h2 id="funções-e-métodos">Funções e métodos</h2>
+
+<p>Sempre quando criamos funções, o python cria um objeto em cima da função. Quando colocamos funções dentro de uma classe elas ficam conhecidas como métodos. Como python tudo é um objeto, ele aceita apenas passagem-por-referência, isso significa que quando uma variável entra dentro de uma função ela é verdadeiramente modificada e não apenas sua cópia. Exemplo:</p>
+
+<pre><code class="language-python">def um():
+  x = 2
+  print (x)
+  dobra (x)
+  print (x)
+def dobra(y):
+  y = y * y
+</code></pre>
+
+<p>Com saída proveniente do programa <code>um()</code>, 2 e 4. Assim, o programa dobra() modificou verdadeiramente a variável.</p>
+
+<h2 id="definindo-uma-classe">Definindo uma classe</h2>
+
+<p>Uma classe é o que define todo o conceito de orientação a objetos, sua instâncias, métodos e outros. Em python uma classe de um certo objeto é o mesmo que seu tipo, já que TUDO é um objeto. Agora vamos mostrar como ela é utilizada em python. Vamos definir uma classe então:</p>
+
+<pre><code class="language-python">class Retangulo(object):
+  def __init__(self, largura, comprimento):
+    self._largura = largura
+    self._comprimento = comprimento
+Agora, vamos definir algumas instâncias com tipo Retângulo:
+c = Retangulo(1, 0)
+d = Retangulo(2, 0)
+e = Retangulo(3, 0)
+print (c._largura)
+print (d._largura)
+print (e._largura)
+</code></pre>
+
+<p>O que retorna como saída, 1, 2, 3. Ambas c e d se referem a duas instâncias diferentes da classe <code>Retangulo</code>. O atributo de instância object é acessado utilizando o operador . (ponto).</p>
+
+<p>Agora, o que seria esse método <code>__init__</code> utilizado para definir a classe?</p>
+
+<p>Esse é o construtor em python.</p>
+
+<p>Agora vamos definir como é feito o encapsulamento em python:</p>
+
+<pre><code class="language-python">class Retangulo(object):
+  def getLargura(self):
+    return self._largura
+  def setLargura(self, valor):
+    self._largura = valor
+  largura = property( fget = getLargura, fset = setLargura)
+</code></pre>
+
+<p>Esses métodos criados são utilizados para prover acesso aos atributos. Exemplo:</p>
+
+<pre><code class="language-python">c.setLargural(2)
+print (c.getLargura())
+</code></pre>
+
+<p>O que modifica a largura da instância c para 2.</p>
+
+<p>Agora o property é um atributo de classe para promover o get e o set. O argumento fget é uma propriedade específica do “getter” e o argumento fset é uma propriedade específica do “setter”. Seu uso é simples, como pode ser visto abaixo:</p>
+
+<pre><code class="language-python">c.setLargura(2)
+print (c.getLargura())
+//o que seria equivalente utilizando property a:
+c.largura = 2
+print (c.largura)
+</code></pre>
+
+<p>Além disso, podemos também utilizar em python sobrecarga dos operadores, que determinaria outra ação para uma soma entre os objetos ou qualquer outra operação. Por exemplo:</p>
+
+<pre><code class="language-python">def __add__(self, c):
+  return Retangulo(self.largura + c.largura, self.comprimento + c.comprimento)
+</code></pre>
+
+<p>Assim quando utilizamos uma soma ele vai executar as ações definidas acima. Além desses podemos fazer para subtração <code>__sub__</code> e para multiplicação <code>__mul__</code>.</p>
+
+<p>Temos também em python métodos estatísticos. Eles são definidos da seguinte forma:</p>
+
+<pre><code class="language-python">@staticmethod
+  def main(*argv):
+    print (&quot;oi&quot;)
+</code></pre>
+
+<h2 id="classes-aninhadas">Classes Aninhadas</h2>
+
+<p>Em python podemos definir uma classe dentro de outra. Dessa forma elas são conhecidas como aninhadas. Conforme o exemplo:</p>
+
+<pre><code class="language-python">class Ponto(object):
+  def __init__(self):
+    self.y = 0
+    self.x = 0
+  class OutroPonto(object):
+    def __init__(self):
+      self.x = 0  
+      selt.y = 1
+    def f(self):
+      self.x = self.y
+</code></pre>
+
+<p>Python trata uma classe aninhada da mesma forma que uma classe não aninhada. Como pode ser visto:</p>
+
+<pre><code class="language-python">obj = Ponto.OutroPonto()
+obj.f()
+</code></pre>
+
+<h2 id="herança"> Herança</h2>
+
+<p>Primeiramente, o que seria o conceito de herança dentro do desenvolvimento orientado a objetos?</p>
+
+<p>Herança é o conceito no qual, você cria uma nova classe a partir de uma classe já existente. Herdando seus atributos e métodos.</p>
+
+<p>Isso ajuda você a escrever menos códigos repetitivos, por exemplo, quando temos bases, já vieram diversos atributos considerados úteis para uso em cada tipo de variável. Essa foi uma herança de object. Agora vamos ver como utilizá-la em python:</p>
+
+<pre><code class="language-python">class Pessoa(object):
+  FEMALE = 0
+  MALE = 1
+  def __init__(self, nome, sexo):
+    super(Pessoa, self).__init__()
+    self._nome = nome
+    self._sexo = sexo
+  def __str__(self):
+    return str(self._nome)
+class Pais(Pessoa):
+  def __init__(self, nome, sexo, crianca):
+    super(Pais, self).__init__(nome, sexo)
+    self._crianca = crianca
+  def getCrianca(self, i):
+    return self._crianca[i]
+  def __str__(self):
+    pass
+</code></pre>
+
+<p>Assim, um pai vai possuir todos os atributos de pessoa. O que evita que esses atributos sejam escritos novamente na classe Pais. Diferente de outras linguagens, também possuímos uma herança múltipla em python. Conforme visto a seguir:</p>
+
+<pre><code class="language-python">class Nada1(object):
+  def g():
+    pass
+class Nada2(object):
+  pass
+  def g():
+    pass
+class Nada3(Nada1, Nada2):
+  pass
+</code></pre>
+
+<h2 id="exceções"> Exceções</h2>
+
+<p>Em python temos um objeto Exception que pode ser definido uma ação quando ocorre uma exceção. Por exemplo:</p>
+
+<pre><code class="language-python">class Excecao(Exception):
+  pass
+def t():
+  raise A
+def s():
+  try:
+    t()
+  except A:
+    pass
+</code></pre>
+
+<p>Um método levanta uma exceção usando o identificador raise: Um identificador raise é similar a um identificador return. Uma identificador return representa a terminação normal de um método e o objeto retornado combina o valor do retorno do método. Um identificador raise representa a terminação anormal de um método e o objeto levantado representa o tipo de erro encontrado. O método f levanta uma exceção de A.</p>
+
+<p>Os alimentadores da exceção são definidos usando um bloco try: O corpo do bloco try está executado qualquer um até que uma exceção esteja levantada ou até que termine normalmente. Um ou mais alimentadores de exceção seguem em um bloco try. Cada alimentador de exceção consiste na cláusula que especifica as exceções a serem travadas, e um bloco do código, que é executado quando a exceção ocorre. Quando o corpo do bloco try levanta uma exceção para que uma exceção está definida, o controle é transferido ao corpo do alimentador da exceção.</p>
+
+<h2 id="recomendações">Recomendações</h2>
+
+<p><a href="http://www.cafepy.com/article/python_types_and_objects/python_types_and_objects.html">Python Types and Objects</a> de Shalabh Chaturvedi</p>
+
+<p><a href="http://www.cafepy.com/article/python_attributes_and_methods/">Python Attributes and Methods</a> de Shalabh Chaturvedi</p>
+
+<p><a href="https://docs.python.org/2/tutorial/classes.html">Python 2.x official documentation</a> about classes</p>
+
+<p><a href="https://docs.python.org/3/tutorial/classes.html">Python 3.x official documentation</a></p>
+
+<p><a href="http://legacy.python.org/dev/peps/pep-0252/">PEP 252 — Making Types Look More Like Classes</a> and many other PEPs like PEP <a href="http://legacy.python.org/dev/peps/pep-3115/">3115 — Metaclasses in Python 3000</a> and / <a href="http://legacy.python.org/dev/peps/pep-3119">PEP 3119 — Introducing Abstract Base Classes</a> by Guido van Rossum and others</p>
+
+<p><a href="http://rhettinger.wordpress.com/2011/05/26/super-considered-super/">Python’s super() considered super!</a> and <a href="http://legacy.python.org/dev/peps/pep-3135/">PEP 3135 — New Super</a> by Raymond Hettinger</p>
+
+<p><a href="http://www.rafekettler.com/magicmethods.html">A Guide to Python’s Magic Methods</a> by Rafe Kettler</p>
+
+<p><a href="http://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">Improve Your Python: Python Classes and Object Oriented Programming</a> by Jeff Knupp</p>
+
+<p><a href="http://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/">Drastically Improve Your Python: Understanding Python’s Execution Model</a> by Jeff Knupp</p>
+
+<p><a href="http://www.brianholdefehr.com/decorators-and-functional-python">Decorators and Functional Python</a> by Brian Holdefehr (despite the title, it has to do with classes too)</p>
+
+<p><a href="http://python-history.blogspot.it/2013/10/origin-of-metaclasses-in-python.html">Origin of metaclasses in Python</a> by Guido van Rossum</p>
+
+<p><a href="http://python-history.blogspot.it/2010/06/inside-story-on-new-style-classes.html">The Inside Story on New-Style Classes</a> by Guido van Rossum</p>
+
+<p><a href="http://lgiordani.com/blog/2014/03/05/oop-concepts-in-python-2-dot-x-part-1/">OOP Concepts in Python 2.x</a> by Leonardo Giordani (series of 3 articles, superseded by the following one)</p>
+
+<p><a href="http://lgiordani.com/blog/2014/08/20/python-3-oop-part-1-objects-and-types/">Python 3 OOP</a> by Leonardo Giordani (series of 6 articles)</p>
+
+<p><a href="http://lgiordani.com/blog/2015/03/14/python-3-oop-notebooks/">Python 3 OOP Notebooks</a> by Leonardo Giordani (IPython Notebooks version of the previous series of posts)</p>
+
+<p><a href="http://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/">Understanding Python metaclasses</a> by Ionel C. Mărieș</p>
+
+<h2 id="recomendações-de-livros-para-data-science-em-python">Recomendações de livros para data science em python</h2>
+
+<p><a href="https://github.com/donnemartin/data-science-ipython-notebooks">Página do Github com diversos livros para data science em python</a>, spoiler, estão em inglês. :p</p>
+</div>
+  <footer class="post-footer">
+    
+    <ul class="post-tags">
+      
+      <li>
+        <a href="/tags/python/">python</a>
+      </li>
+      
+      <li>
+        <a href="/tags/programa%C3%A7%C3%A3o-orientada-a-objetos/">programação orientada a objetos</a>
+      </li>
+      
+    </ul>
+    
+  </footer>
+  
+   
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_shortname = 'nicolasbontempo';
+    (function () { 
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+   
+</article>
+</main>
+<footer class="footer">
+  <span>&copy; 2015-2019 Nicolas Bontempo 🎉</span>
+</footer>
+<script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-71553462-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script data-no-instant>
+  hljs.initHighlightingOnLoad();
+  menuToggle();
+  InstantClick.on('change', function() {
+    var blocks = document.querySelectorAll('pre code');
+    for (var i = 0; i < blocks.length; i++) {
+      hljs.highlightBlock(blocks[i]);
+    }
+    menuToggle();
+  });
+  function menuToggle() {
+    var $toggle = document.querySelector('.menu-toggle');
+    if (!$toggle.offsetParent) {
+      return;
+    }
+    var $body = document.querySelector('body');
+    $toggle.addEventListener('click', function() {
+      $body.classList.toggle('noscroll');
+    }, false);
+  }
+</script>
+</body>
+</html>
