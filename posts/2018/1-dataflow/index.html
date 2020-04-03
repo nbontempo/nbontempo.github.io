@@ -72,9 +72,15 @@ Processing Pipelines (Dataflow) - Introduction The library Dataflow provides sev
 
 <h2 id="types-of-blocks-on-dataflow">Types of blocks on Dataflow</h2>
 
-<p>The library Dataflow structures it in one concept called Blocks, which are data structures that buffer and process data. There are three types of a block on Dataflow: <code>Source Blocks</code> source of data and can be read, <code>Target Blocks</code> receiver of data and can be written and <code>Propagator Blocks</code> that is both source and target.</p>
+<p>The library Dataflow is structured in one concept called Blocks, which are data structures that buffer and process data. There are three types of a block on Dataflow:</p>
 
-<p>This blocks can be connected forming one pipeline, which is a form of network, in that way data can be processed through the pipe propagating asynchronously to targets as that data becomes available. The method <code>LinkTo</code> presented on the source blocks and propagator, links the blocks, with this, you can connect to one or more targets, and provide a filter for each link (optional). This is useful for example you want just the items who has value to continue on the pipeline.</p>
+<p>1- <code>Source Blocks</code> - Block that is the source of data and can be read by others components</p>
+
+<p>2- <code>Target Blocks</code> - Block that is a receiver of data and can be written by other components</p>
+
+<p>3- <code>Propagator Blocks</code> - Block that is both <code>source</code> and <code>target</code>.</p>
+
+<p>This blocks can be connected forming one <code>pipeline</code>, which is a form of network, in that way data can be processed through the pipe propagating synchronously or asynchronously to targets as that data becomes available. The method <code>LinkTo</code> presented on the source blocks and propagator, links the blocks, with this, you can connect to one or more targets, and provide a filter for each link (optional). This is useful for example when you want just the items who has value to continue on the pipeline.</p>
 
 <p>These types are divided into three categories: <em>buffering blocks</em>, <em>execution blocks</em> and <em>grouping blocks</em>.</p>
 
