@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on Nicolas Bontempo</title>
+    <link>http://nickbom.github.io/tags/cloud/</link>
+    <description>Recent content in Cloud on Nicolas Bontempo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Nov 2019 16:33:49 -0300</lastBuildDate>
+    
+	<atom:link href="http://nickbom.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloud Design Patterns - CQRS</title>
+      <link>http://nickbom.github.io/posts/2019/3-cloud-pattern-1/</link>
+      <pubDate>Thu, 21 Nov 2019 16:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/2019/3-cloud-pattern-1/</guid>
+      <description>This will be a new series of articles, which I will explain some cloud design patterns. My principal motivation on writing these articles, is getting more deep on this patterns and try to share with others what I learn.</description>
+    </item>
+    
+  </channel>
+</rss>
