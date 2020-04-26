@@ -15,9 +15,15 @@ The library Dataflow is available like one [package NUGET](https://www.nuget.org
 
 ## Types of blocks on Dataflow
 
-The library Dataflow structures it in one concept called Blocks, which are data structures that buffer and process data. There are three types of a block on Dataflow: `Source Blocks` source of data and can be read, `Target Blocks` receiver of data and can be written and `Propagator Blocks` that is both source and target. 
+The library Dataflow is structured in one concept called Blocks, which are data structures that buffer and process data. There are three types of a block on Dataflow: 
 
-This blocks can be connected forming one pipeline, which is a form of network, in that way data can be processed through the pipe propagating asynchronously to targets as that data becomes available. The method `LinkTo` presented on the source blocks and propagator, links the blocks, with this, you can connect to one or more targets, and provide a filter for each link (optional). This is useful for example you want just the items who has value to continue on the pipeline.
+1- `Source Blocks` - Block that is the source of data and can be read by others components
+
+2- `Target Blocks` - Block that is a receiver of data and can be written by other components
+
+3- `Propagator Blocks` - Block that is both `source` and `target`. 
+
+This blocks can be connected forming one ``pipeline``, which is a form of network, in that way data can be processed through the pipe propagating synchronously or asynchronously to targets as that data becomes available. The method `LinkTo` presented on the source blocks and propagator, links the blocks, with this, you can connect to one or more targets, and provide a filter for each link (optional). This is useful for example when you want just the items who has value to continue on the pipeline.
 
 These types are divided into three categories: *buffering blocks*, *execution blocks* and *grouping blocks*. 
 
