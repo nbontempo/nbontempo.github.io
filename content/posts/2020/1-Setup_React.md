@@ -29,15 +29,15 @@ And let's add our depencies on the `DevDependecies` object on `package.json`:
 
 ```json
 "devDependencies": {
-  "babel-eslint": "^10.0.3",
-  "eslint": "^6.8.0",
-  "eslint-config-babel": "^9.0.0",
-  "eslint-config-prettier": "^6.10.0",
-  "eslint-plugin-import": "^2.20.0",
-  "eslint-plugin-prettier": "^3.1.2",
-  "eslint-plugin-react": "^7.18.0",
-  "eslint-plugin-standard": "^4.0.1",
-  "prettier": "^1.19.1"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-babel": "^9.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1"
 }
 ```
 
@@ -70,7 +70,7 @@ And now let's create our eslint configuration, create on root project folder one
 
 ## VSCode configuration
 
-There is some VSCode extensions that are my favorite companions when developing javascript code and who will work flawlessly with our current project configuration. First, let's add the [Prettier plugin](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and the [ESLint plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+There are some VSCode extensions that are my favorite companions when developing javascript code and that will work flawlessly with our current project configuration. First, let's add the [Prettier plugin](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and the [ESLint plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 One thing that I learned recently that is a nice feature on VSCode is that you can [sugest extensions to be installed on your project](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions). So let's create one folder on the root folder called `.vscode` inside this folder let's create one json file called `.extensions.json` with:
 
@@ -80,7 +80,7 @@ One thing that I learned recently that is a nice feature on VSCode is that you c
 }
 ```
 
-Another thing that I like to configure, but not everyone like, is to configure when I save a file will trigger the prettier formatting. So let's configure this automatic formatting, open the command palette on VSCode with `Ctrl+shift+P` and let's select "open workspace settings" that will open the project configurations on VSCode. Choose the json editor and insert the following code inside it:
+Another thing that I like to configure, but not everyone likes, is to setup VSCode to trigger the prettier formatting when I save a file. So let's configure this automatic formatting, open the command palette on VSCode with `Ctrl+shift+P` and let's select "open workspace settings" that will open the project configurations on VSCode. Choose the json editor and insert the following code inside it:
 
 ```json
 {
@@ -99,4 +99,4 @@ Another thing that I like to configure, but not everyone like, is to configure w
 
 ## Conclusion
 
-My intent with this article was not to extend on the fundation of the tools used on here, but go straight to the point of how to properly configure our react application with eslint and pretties. With this configuration you will be more productive for sure!
+My intent with this article was not to extend on the foundation of the tools used here, but go straight to the point of how to properly configure react applications with eslint and prettier. With this configuration you will be more productive for sure!
