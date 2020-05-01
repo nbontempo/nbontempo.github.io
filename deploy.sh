@@ -1,4 +1,4 @@
-snap run hugo -t hugo-paper
+hugo -t hugo-paper
 
 cd public
 git add .
