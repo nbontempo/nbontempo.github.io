@@ -1,10 +1,14 @@
+#!/bin/sh
+set -e
+printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 hugo -t hugo-paper
-
 cd public
 git add .
-
-git commit -m "Modificando o blog"
-
-git push origin master -f
-
-cd ..
+# Commit changes.
+msg="rebuilding site $(date)"
+if [ -n "$*" ]; then
+	msg="$*"
+fi
+git commit -m "$msg"
+# Push source and build repos.
+git push origin master --force
