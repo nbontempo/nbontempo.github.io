@@ -13,10 +13,10 @@
     
     <item>
       <title>Introdução de Containers</title>
-      <link>http://nickbom.github.io/posts/2016/introducao-containers/</link>
+      <link>http://nickbom.github.io/2016/11/introdu%C3%A7%C3%A3o-de-containers/</link>
       <pubDate>Sun, 13 Nov 2016 16:39:27 -0300</pubDate>
       
-      <guid>http://nickbom.github.io/posts/2016/introducao-containers/</guid>
+      <guid>http://nickbom.github.io/2016/11/introdu%C3%A7%C3%A3o-de-containers/</guid>
       <description>Conceitos, prós e contras, orquestração, ferramentas (docker e outras alternativas) A virtualização baseada em containers é uma das tecnologias mais quentes se for pensar no contexto da computação em nuvem. Ela gera combustível para inovação e muda como as aplicações são desenvolvidas e operadas hoje em dia. É difícil nomear grandes empresas de tecnologia que não estejam investindo, nem usando a tecnologia de containers de uma forma ou de outra. As ideias de containers não são novas, as tecnologias para sua criação estão disponíveis desde os anos 2000.</description>
     </item>
     

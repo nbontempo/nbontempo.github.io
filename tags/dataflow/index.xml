@@ -13,10 +13,10 @@
     
     <item>
       <title>Processing Pipelines (Dataflow) - Introduction</title>
-      <link>http://nickbom.github.io/posts/2018/1-dataflow/</link>
+      <link>http://nickbom.github.io/2018/09/processing-pipelines-dataflow-introduction/</link>
       <pubDate>Sun, 09 Sep 2018 16:33:49 -0300</pubDate>
       
-      <guid>http://nickbom.github.io/posts/2018/1-dataflow/</guid>
+      <guid>http://nickbom.github.io/2018/09/processing-pipelines-dataflow-introduction/</guid>
       <description>Hello Guys, recently I changed a job going to a new challenge into Take. From this, I started to study some parts of the stack that I was not familiar. One of these is Dataflow. This is the start of my summary mostly provided by the study of the documentation and some coding.
 Processing Pipelines (Dataflow) - Introduction The library Dataflow provides several functions to intensive processing, helping the developers with concurrency-enabled applications.</description>
     </item>
