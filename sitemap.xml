@@ -17,13 +17,6 @@
   </url>
   
   <url>
-    <loc>http://nickbom.github.io/posts/</loc>
-    <lastmod>2020-05-21T19:33:49-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://nickbom.github.io/tags/</loc>
     <lastmod>2020-05-21T19:33:49-03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -333,6 +326,13 @@
   
   <url>
     <loc>http://nickbom.github.io/</loc>
+    <lastmod>2015-05-19T20:16:29-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/</loc>
     <lastmod>2015-05-19T20:16:29-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
