@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flow on Nicolas Bontempo</title>
+    <link>http://nickbom.github.io/tags/flow/</link>
+    <description>Recent content in flow on Nicolas Bontempo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Apr 2017 16:39:06 -0300</lastBuildDate>
+    
+	<atom:link href="http://nickbom.github.io/tags/flow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como melhorar sua felicidade e realização pelo estado de &#39;flow&#39;</title>
+      <link>http://nickbom.github.io/posts/2017/melhoria-da-felicidade-atraves-do-estado-flow/</link>
+      <pubDate>Sun, 09 Apr 2017 16:39:06 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/2017/melhoria-da-felicidade-atraves-do-estado-flow/</guid>
+      <description>Essa terminologia foi estudada pelo psicólogo húngaro Mihaly Csikszentmihalyi, o &amp;ldquo;flow&amp;rdquo; ou como vai ser referenciado nesse texto como &amp;ldquo;fluxo&amp;rdquo;, é caracterizado como o estado mental de profunda alegria e criatividade, proveniente de um envolvimento total na realização de alguma atividade. No meio profissional esse estado fica mais visível no desempenho e motivação do funcionário. Quando alguém está “no flow”, torna seu trabalho mais eficaz, aumentando sua produtividade e otimizando os processos da empresa.</description>
+    </item>
+    
+  </channel>
+</rss>
