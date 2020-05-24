@@ -5,7 +5,6 @@ draft: false
 tags: ["Trabalho"]
 ---
 
-
 Na área de ciência da computação as pessoas tem uma tendência em sentir os sintomas do *burnout*, no entanto a grande maioria sequer o conhece. Decidi escrever sobre o problema até para melhor esclarecer esse problema para os meus colegas e mostrar como resolvê-lo de uma forma inteligente.
 
 Basicamente o *burnout* surge como consequência de algum estresse, normalmente criado por excessos no trabalho ou faculdade, seja de responsabilidades ou mesmo de pressão em certas tarefas. Os principais sintomas são exaustão emocional, avaliação negativa de si mesmo, depressão e insensibilidade com relação a quase tudo e todos que tende a ser uma defesa emocional. Assim, ao não se sensibilizar a pessoa estaria criando uma parede para afastar a pressão e os problemas do trabalho, o que por sua vez tende entre outros fatores ao isolamento e ao acúmulo de estresse.
