@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dataflow on Nicolas Bontempo</title>
+    <link>http://nickbom.github.io/tags/dataflow/</link>
+    <description>Recent content in dataflow on Nicolas Bontempo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Sep 2018 16:33:49 -0300</lastBuildDate>
+    
+	<atom:link href="http://nickbom.github.io/tags/dataflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Processing Pipelines (Dataflow) - Introduction</title>
+      <link>http://nickbom.github.io/posts/2018/1-dataflow/</link>
+      <pubDate>Sun, 09 Sep 2018 16:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/2018/1-dataflow/</guid>
+      <description>Hello Guys, recently I changed a job going to a new challenge into Take. From this, I started to study some parts of the stack that I was not familiar. One of these is Dataflow. This is the start of my summary mostly provided by the study of the documentation and some coding.
+Processing Pipelines (Dataflow) - Introduction The library Dataflow provides several functions to intensive processing, helping the developers with concurrency-enabled applications.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/newsletter/</loc>
+    <lastmod>2020-05-21T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2020/3newsletter/</loc>
+    <lastmod>2020-05-21T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/</loc>
+    <lastmod>2020-05-21T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/</loc>
+    <lastmod>2020-05-21T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/javascript/</loc>
+    <lastmod>2020-05-01T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/npm/</loc>
+    <lastmod>2020-05-01T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/react/</loc>
+    <lastmod>2020-05-01T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2020/1setupreact/</loc>
+    <lastmod>2020-05-01T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/spa/</loc>
+    <lastmod>2020-05-01T19:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2019/2-newsletter2/</loc>
+    <lastmod>2019-08-11T16:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2019/1-newsletter/</loc>
+    <lastmod>2019-02-04T16:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/dataflow/</loc>
+    <lastmod>2018-09-09T16:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/pipeline/</loc>
+    <lastmod>2018-09-09T16:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2018/1-dataflow/</loc>
+    <lastmod>2018-09-09T16:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/determina%C3%A7%C3%A3o/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2018/2-determinacao-definindo-obejtivos/</loc>
+    <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/git/</loc>
+    <lastmod>2017-07-20T16:38:04-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2017/git/</loc>
+    <lastmod>2017-07-20T16:38:04-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2017/execucao-startup/</loc>
+    <lastmod>2017-06-18T16:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/startup/</loc>
+    <lastmod>2017-06-18T16:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2017/melhoria-da-felicidade-atraves-do-estado-flow/</loc>
+    <lastmod>2017-04-09T16:39:06-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/deep-work/</loc>
+    <lastmod>2017-04-09T16:39:06-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/flow/</loc>
+    <lastmod>2017-04-09T16:39:06-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/fluxo/</loc>
+    <lastmod>2017-04-09T16:39:06-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2017/burnout/</loc>
+    <lastmod>2017-03-29T16:39:47-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/trabalho/</loc>
+    <lastmod>2017-03-29T16:39:47-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2017/inicio-startup/</loc>
+    <lastmod>2017-03-28T16:34:11-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/introdu%C3%A7%C3%A3o/</loc>
+    <lastmod>2017-03-03T16:37:01-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2017/introducao-redes/</loc>
+    <lastmod>2017-03-03T16:37:01-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/redes/</loc>
+    <lastmod>2017-03-03T16:37:01-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/bibliotecas/</loc>
+    <lastmod>2016-11-26T16:37:45-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/depend%C3%AAncias/</loc>
+    <lastmod>2016-11-26T16:37:45-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/frameworks/</loc>
+    <lastmod>2016-11-26T16:37:45-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2016/inferno-dependencias/</loc>
+    <lastmod>2016-11-26T16:37:45-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/containers/</loc>
+    <lastmod>2016-11-13T16:39:27-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/docker/</loc>
+    <lastmod>2016-11-13T16:39:27-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2016/introducao-containers/</loc>
+    <lastmod>2016-11-13T16:39:27-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2016/introducao-micro-servicos/</loc>
+    <lastmod>2016-11-13T16:37:25-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/micro-servi%C3%A7os/</loc>
+    <lastmod>2016-11-13T16:37:25-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/cheat-sheet/</loc>
+    <lastmod>2015-07-14T16:38:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/estrutura-de-dados/</loc>
+    <lastmod>2015-07-14T16:38:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2015/estrutura-de-dados-cheat-sheets/</loc>
+    <lastmod>2015-07-14T16:38:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/programa%C3%A7%C3%A3o-orientada-a-objetos/</loc>
+    <lastmod>2015-06-14T16:33:06-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2015/programacao-orientada-objetos-python/</loc>
+    <lastmod>2015-06-14T16:33:06-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/python/</loc>
+    <lastmod>2015-06-14T16:33:06-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/posts/2015/meu-primeiro-post/</loc>
+    <lastmod>2015-06-12T16:23:27-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/motiva%C3%A7%C3%A3o/</loc>
+    <lastmod>2015-06-12T16:23:27-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/</loc>
+    <lastmod>2015-05-19T20:16:29-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/sobre/</loc>
+    <lastmod>2015-05-19T20:16:29-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
