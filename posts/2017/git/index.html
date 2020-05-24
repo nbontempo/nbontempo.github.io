@@ -18,8 +18,6 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="icon" href="/img/favicon.ico">
   
-  <meta name="generator" content="Hugo 0.40.1">
-  
   <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Nicolas Bontempo">
 </head>
 <body class="single">
@@ -58,64 +56,54 @@
       </div>
     </p>
   </header>
-  <div class="post-content">
-
-<p>Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um worflow que tem sido muito utilizado pela comunidade é o <em>Feature Branch Workflow</em>, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova <em>branch</em>, ao invés de ser trabalhada na <em>branch master</em>, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na <em>branch</em> principal. Esse worflow melhora a comunicação entre a equipe graças a <em>code reviews</em> pelos <em>pull requests</em>, tornando o ambiente de trabalho mais interativo e comunicativo, para se aprofundar nesse assunto recomendo o artigo da Atlassian <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow">Feature branch workflow</a> (Spoiler, conteúdo em Inglês).</p>
-
+  <div class="post-content"><p>Existem diversos padrões e estruturações quando se trata de versionamento de código com git. Um worflow que tem sido muito utilizado pela comunidade é o <em>Feature Branch Workflow</em>, que basicamente diz que cada nova funcionalidade do sistema (ou correção de bugs) deve ter uma nova <em>branch</em>, ao invés de ser trabalhada na <em>branch master</em>, o que encoraja vários desenvolvedores trabalharem na nova funcionalidade e diminui as chances de ocorrer código quebrado na <em>branch</em> principal. Esse worflow melhora a comunicação entre a equipe graças a <em>code reviews</em> pelos <em>pull requests</em>, tornando o ambiente de trabalho mais interativo e comunicativo, para se aprofundar nesse assunto recomendo o artigo da Atlassian <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow">Feature branch workflow</a> (Spoiler, conteúdo em Inglês).</p>
 <p>Outro conceito bem interessante é utilizar o <em>rebasing</em> quando for oportuno, já que ele melhora a visão como um todo das mudanças realizadas na <em>master</em> enquanto você estava criando sua nova funcionalidade. O <em>rebase</em> funciona da seguinte forma, diferente do merge que ele realiza um <em>commit</em> para introduzir as mudanças de uma branch em outra, o <em>rebase</em> traz os <em>commits</em> para o histórico da branch que está recebendo, mas ele deve ser utilizado com cuidado como dito no artigo também da Atlassian <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing">Golden Rule of Rebasing</a> (Spoiler, conteúdo em Inglês).</p>
-
 <p>Assim, esses dois conceitos juntos com o <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow">Gitflow</a> (Spoiler, conteúdo em Inglês), que melhora a organização da <em>master</em> para realizar lançamento de atualizações, nomeando <em>branch</em> de desenvolvimento e utilizando <em>tags</em> para numeração de versões da <em>master</em>.</p>
-
 <p>Os principais passos para elucidar esses conceitos em formato prático, são os seguintes:</p>
-
 <ul>
-<li><p>Criar uma <em>branch</em> com uma nova funcionalidade ou correção de bugs</p>
-
+<li>
+<p>Criar uma <em>branch</em> com uma nova funcionalidade ou correção de bugs</p>
 <pre><code>git checkout -b &lt;nomeDaBranch&gt;
 </code></pre></li>
-
-<li><p>Fazer mudanças</p>
-
+<li>
+<p>Fazer mudanças</p>
 <pre><code>git add
 git commit -m &quot;descrição das mudanças&quot;
 </code></pre></li>
-
-<li><p>Sincronizar com as mudanças do servidor, caso você as tenha perdido</p>
-
+<li>
+<p>Sincronizar com as mudanças do servidor, caso você as tenha perdido</p>
 <pre><code>git checkout develop
 git pull
 </code></pre></li>
-
-<li><p>Atualizar a sua <em>branch</em> com as últimas mudanças da <em>branch</em> de desenvolvimento utilizando <em>interactive rebase</em></p>
-
+<li>
+<p>Atualizar a sua <em>branch</em> com as últimas mudanças da <em>branch</em> de desenvolvimento utilizando <em>interactive rebase</em></p>
 <pre><code>git checkout &lt;nomeDaBranch&gt;
 git rebase -i develop
 </code></pre></li>
-
-<li><p>Caso você possua conflitos, resolva eles (<a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/">Aqui como</a> (Spoiler, conteúdo em Inglês)) e continue o seu <em>rebase</em></p>
-
+<li>
+<p>Caso você possua conflitos, resolva eles (<a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/">Aqui como</a> (Spoiler, conteúdo em Inglês)) e continue o seu <em>rebase</em></p>
 <pre><code>git add &lt;arquivo1&gt; &lt;arquivo2&gt; ...
 git rebase --continue
 </code></pre></li>
-
-<li><p>Atualize a sua <em>branch</em>. Como o <em>rebase</em> modifica o histórico, você precisa utilizar o <code>-f</code> para forçar mudanças dentro da <em>branch</em> remota, caso você esteja trabalhando com mais pessoas nessa <em>branch</em>, use mudanças menos destrutivas através <code>--force-with-lease</code> (<a href="https://developer.atlassian.com/blog/2015/04/force-with-lease/">Explicação</a> (Spoiler, conteúdo em Inglês)).</p>
-
+<li>
+<p>Atualize a sua <em>branch</em>. Como o <em>rebase</em> modifica o histórico, você precisa utilizar o <code>-f</code> para forçar mudanças dentro da <em>branch</em> remota, caso você esteja trabalhando com mais pessoas nessa <em>branch</em>, use mudanças menos destrutivas através <code>--force-with-lease</code> (<a href="https://developer.atlassian.com/blog/2015/04/force-with-lease/">Explicação</a> (Spoiler, conteúdo em Inglês)).</p>
 <pre><code>git push -f
 </code></pre></li>
-
-<li><p>Faça um <em>Pull request</em></p></li>
-
-<li><p>Através do <em>Pull request</em> a equipe pode dar opiniões sobre a qualidade do código, utilizando <em>code reviews</em>, se bem implementado na equipe pode vir a ser muito util e motivador</p></li>
-
-<li><p>O <em>Pull request</em> vai ser aceito, realizado o <em>merge</em> e fechado pelo revisor</p></li>
-
-<li><p>Remover a sua <em>branch</em> local quando estiver finalizada</p></li>
+<li>
+<p>Faça um <em>Pull request</em></p>
+</li>
+<li>
+<p>Através do <em>Pull request</em> a equipe pode dar opiniões sobre a qualidade do código, utilizando <em>code reviews</em>, se bem implementado na equipe pode vir a ser muito util e motivador</p>
+</li>
+<li>
+<p>O <em>Pull request</em> vai ser aceito, realizado o <em>merge</em> e fechado pelo revisor</p>
+</li>
+<li>
+<p>Remover a sua <em>branch</em> local quando estiver finalizada</p>
+</li>
 </ul>
-
 <h2 id="regras">Regras</h2>
-
 <p>Existem cuidados com o git que devem ser mantidos em mente, para obedecer os conceitos do worflow e gerar menores problemas no uso do git:</p>
-
 <ul>
 <li>Realizar trabalho apenas na <em>branch</em> de novas funcionalidades.</li>
 <li>Criar <em>Pull requests</em> apenas para a <em>branch <code>develop</code></em></li>
@@ -168,12 +156,16 @@ git rebase --continue
 <script data-no-instant>InstantClick.init();</script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-71553462-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-71553462-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <script data-no-instant>
   hljs.initHighlightingOnLoad();

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introdução on Nicolas Bontempo</title>
+    <title>introdução on Nicolas Bontempo</title>
     <link>http://nickbom.github.io/tags/introdu%C3%A7%C3%A3o/</link>
-    <description>Recent content in Introdução on Nicolas Bontempo</description>
+    <description>Recent content in introdução on Nicolas Bontempo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Mar 2017 16:37:01 -0300</lastBuildDate>
@@ -27,7 +27,7 @@ Redes Computadores se comunicam (trocam dados) com o objetivo de gerar valor par
       <pubDate>Sun, 13 Nov 2016 16:39:27 -0300</pubDate>
       
       <guid>http://nickbom.github.io/posts/2016/introducao-containers/</guid>
-      <description>Conceitos, prós e contras, orquestração, ferramentas (docker e outras alternativas) A virtualização baseada em containers é uma das tecnologias mais quentes se for pensar no contexto da computação em nuvem. Ela gera combustível para inovação e muda como as aplicações são desenvolvidas e operadas hoje em dia. É difícil nomear grandes empresas de tecnologia que não estejam investindo, nem usando a tecnologia de containers de uma forma ou de outra.</description>
+      <description>Conceitos, prós e contras, orquestração, ferramentas (docker e outras alternativas) A virtualização baseada em containers é uma das tecnologias mais quentes se for pensar no contexto da computação em nuvem. Ela gera combustível para inovação e muda como as aplicações são desenvolvidas e operadas hoje em dia. É difícil nomear grandes empresas de tecnologia que não estejam investindo, nem usando a tecnologia de containers de uma forma ou de outra. As ideias de containers não são novas, as tecnologias para sua criação estão disponíveis desde os anos 2000.</description>
     </item>
     
     <item>

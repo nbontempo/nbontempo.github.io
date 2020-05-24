@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Nicolas Bontempo</title>
@@ -6,17 +6,26 @@
     <description>Recent content in Posts on Nicolas Bontempo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2020 19:33:49 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 19:33:49 -0300</lastBuildDate>
     
 	<atom:link href="http://nickbom.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Newsletter - 2020/1</title>
+      <link>http://nickbom.github.io/posts/2020/3newsletter/</link>
+      <pubDate>Thu, 21 May 2020 19:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/posts/2020/3newsletter/</guid>
+      <description>Extreme ownership - This TED talk, Jocko Willink shows how you can increase team performance, confiability and create a culture of self improvement by having ownership. I think that one of the best example on the software domain is the nubank speak (sobrevivendo a escala) that they show how extreme ownership can be powerfull to change the perspective of the incident and this can improve the culture of the company.</description>
+    </item>
+    
+    <item>
       <title>Setup VSCode, ESLint and Prettier for react - 2020</title>
-      <link>http://nickbom.github.io/posts/2020/1-setup_react/</link>
+      <link>http://nickbom.github.io/posts/2020/1setupreact/</link>
       <pubDate>Fri, 01 May 2020 19:33:49 -0300</pubDate>
       
-      <guid>http://nickbom.github.io/posts/2020/1-setup_react/</guid>
+      <guid>http://nickbom.github.io/posts/2020/1setupreact/</guid>
       <description>I&amp;rsquo;m on vacation passing most of my time on home so I started some small projects using react and this is the basic to bootstrap and write code with more productivity and with standards. As things changes quickly on frontend I dated my article, so this is a 2020 edition of this setup.
 The intention of this setup is provide early feedback and automation for linting and formatting.
 Let&amp;rsquo;s start creating the react project npx create-react-app little-project</description>
@@ -29,7 +38,7 @@ Let&amp;rsquo;s start creating the react project npx create-react-app little-pro
       
       <guid>http://nickbom.github.io/posts/2019/2-newsletter2/</guid>
       <description>Starting the second semester with the right foot one new post with some interesting articles, this articles are what I&amp;rsquo;m studying right now and found interesting.
- Centralization, structuring decision making in the team - How can affect the team performance and advantages and disadvantages. In a centralized authority we have a less team interdependence, task-focused on execution, low complexity tasks, high diversity in experiences. In a decentralized, we have greater team interdependence, creativity focused tasks, high complexity tasks, low diversity in experience.</description>
+  Centralization, structuring decision making in the team - How can affect the team performance and advantages and disadvantages. In a centralized authority we have a less team interdependence, task-focused on execution, low complexity tasks, high diversity in experiences. In a decentralized, we have greater team interdependence, creativity focused tasks, high complexity tasks, low diversity in experience.</description>
     </item>
     
     <item>
@@ -39,7 +48,7 @@ Let&amp;rsquo;s start creating the react project npx create-react-app little-pro
       
       <guid>http://nickbom.github.io/posts/2019/1-newsletter/</guid>
       <description>This is my first newsletter. The idea was to provide some useful links to great articles that I found on the web. I expect that you appreciate. One or another is in PT-BR that is my main language, sorry for the lack of pattern.
- Great podcast that started my year, this audio provides a great experience to think about your life and in which path you are following. Café Brasil - Quando eu tiver 64</description>
+  Great podcast that started my year, this audio provides a great experience to think about your life and in which path you are following. Café Brasil - Quando eu tiver 64</description>
     </item>
     
     <item>
@@ -138,7 +147,7 @@ Nós importamos, usamos e herdamos a framework do mês como se elas todas fossem
       <pubDate>Sun, 13 Nov 2016 16:39:27 -0300</pubDate>
       
       <guid>http://nickbom.github.io/posts/2016/introducao-containers/</guid>
-      <description>Conceitos, prós e contras, orquestração, ferramentas (docker e outras alternativas) A virtualização baseada em containers é uma das tecnologias mais quentes se for pensar no contexto da computação em nuvem. Ela gera combustível para inovação e muda como as aplicações são desenvolvidas e operadas hoje em dia. É difícil nomear grandes empresas de tecnologia que não estejam investindo, nem usando a tecnologia de containers de uma forma ou de outra.</description>
+      <description>Conceitos, prós e contras, orquestração, ferramentas (docker e outras alternativas) A virtualização baseada em containers é uma das tecnologias mais quentes se for pensar no contexto da computação em nuvem. Ela gera combustível para inovação e muda como as aplicações são desenvolvidas e operadas hoje em dia. É difícil nomear grandes empresas de tecnologia que não estejam investindo, nem usando a tecnologia de containers de uma forma ou de outra. As ideias de containers não são novas, as tecnologias para sua criação estão disponíveis desde os anos 2000.</description>
     </item>
     
     <item>

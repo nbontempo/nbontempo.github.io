@@ -19,8 +19,6 @@ Tipos Fundamentais Tudo em python funciona como se fosse um objeto, por exemplo,
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="icon" href="/img/favicon.ico">
   
-  <meta name="generator" content="Hugo 0.40.1">
-  
   <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Nicolas Bontempo">
 </head>
 <body class="single">
@@ -60,239 +58,159 @@ Tipos Fundamentais Tudo em python funciona como se fosse um objeto, por exemplo,
       </div>
     </p>
   </header>
-  <div class="post-content">
-
-<p>Nesse guia você irá aprender os tipos fundamentais de python, funções e métodos, como definir uma classe, classes aninhadas, herança e exceções. Tudo o que é necessário para um bom inicio com python.</p>
-
+  <div class="post-content"><p>Nesse guia você irá aprender os tipos fundamentais de python, funções e métodos, como definir uma classe, classes aninhadas, herança e exceções. Tudo o que é necessário para um bom inicio com python.</p>
 <h2 id="tipos-fundamentais">Tipos Fundamentais</h2>
-
 <p>Tudo em python funciona como se fosse um objeto, por exemplo, quando temos um inteiro em python ele é um objeto, mas esse objeto tem o tipo int. Então em uma definição de um objeto temos os seguintes atributos:</p>
-
 <ul>
-<li><p>Identificador</p></li>
-
-<li><p>Valor</p></li>
-
-<li><p>Tipo, todo objeto tem um tipo. O tipo ajuda a determinar que tipo de operações são possíveis com o objeto.</p></li>
-
-<li><p>Um ou mais bases. Uma base é similar a uma super classe.</p></li>
+<li>
+<p>Identificador</p>
+</li>
+<li>
+<p>Valor</p>
+</li>
+<li>
+<p>Tipo, todo objeto tem um tipo. O tipo ajuda a determinar que tipo de operações são possíveis com o objeto.</p>
+</li>
+<li>
+<p>Um ou mais bases. Uma base é similar a uma super classe.</p>
+</li>
 </ul>
-
 <p>Exemplo:</p>
-
 <p><code>x = 2 &gt;&gt;&gt; type(x) &lt;type ‘int’&gt;</code></p>
-
 <p>Primeiramente temos uma variável inteira criada. Dentro dessa variável temos outro objeto int o qual vamos explorar mais profundamente. Quando chamamos type, ele apenas retorna o atributo de <code>__class__</code>, como podemos ver abaixo:</p>
-
 <p><code>type(type(x)) &lt;type ‘type’&gt;</code></p>
-
 <p>E como podemos ver, o objeto int é um objeto type, além disso, o atributo <code>__bases__</code> contém um objeto chamado object, como podemos ver abaixo:</p>
-
 <p><code>type(x).__bases__ (&lt;type ‘object’&gt;,)</code></p>
-
 <p>Depois de tudo, podemos ver que temos vários atributos relacionados com esse objetos quando chamando a função dir. Então, igual vimos TUDO é um objeto. Podemos utilizar isso como uma regra geral de python, TUDO é um objeto. Sim, tudo. Até métodos e funções.</p>
-
-<p><code>
- dir(x) [‘__abs__’, ‘__add__’, ‘__and__’, ‘__class__’, ‘__cmp__’, ‘__coerce__’, ‘__delattr__’, ‘__div__’, ‘__divmod__’, ‘__doc__’, ‘__float__’, ‘__floordiv__’, ‘__format__’, ‘__getattribute__’, ‘__getnewargs__’, ‘__hash__’, ‘__hex__’, ‘__index__’, ‘__init__’, ‘__int__’, ‘__invert__’, ‘__long__’, ‘__lshift__’, ‘__mod__’, ‘__mul__’, ‘__neg__’, ‘__new__’, ‘__nonzero__’, ‘__oct__’, ‘__or__’, ‘__pos__’, ‘__pow__’, ‘__radd__’, ‘__rand__’, ‘__rdiv__’, ‘__rdivmod__’, ‘__reduce__’, ‘__reduce_ex__’, ‘__repr__’, ‘__rfloordiv__’, ‘__rlshift__’, ‘__rmod__’, ‘__rmul__’, ‘__ror__’, ‘__rpow__’, ‘__rrshift__’, ‘__rshift__’, ‘__rsub__’, ‘__rtruediv__’, ‘__rxor__’, ‘__setattr__’, ‘__sizeof__’, ‘__str__’, ‘__sub__’, ‘__subclasshook__’, ‘__truediv__’, ‘__trunc__’, ‘__xor__’, ‘bit_length’, ‘conjugate’, ‘denominator’, ‘imag’, ‘numerator’, ‘real’]
-</code></p>
-
-<h2 id="funções-e-métodos">Funções e métodos</h2>
-
+<p><code>dir(x) [‘__abs__’, ‘__add__’, ‘__and__’, ‘__class__’, ‘__cmp__’, ‘__coerce__’, ‘__delattr__’, ‘__div__’, ‘__divmod__’, ‘__doc__’, ‘__float__’, ‘__floordiv__’, ‘__format__’, ‘__getattribute__’, ‘__getnewargs__’, ‘__hash__’, ‘__hex__’, ‘__index__’, ‘__init__’, ‘__int__’, ‘__invert__’, ‘__long__’, ‘__lshift__’, ‘__mod__’, ‘__mul__’, ‘__neg__’, ‘__new__’, ‘__nonzero__’, ‘__oct__’, ‘__or__’, ‘__pos__’, ‘__pow__’, ‘__radd__’, ‘__rand__’, ‘__rdiv__’, ‘__rdivmod__’, ‘__reduce__’, ‘__reduce_ex__’, ‘__repr__’, ‘__rfloordiv__’, ‘__rlshift__’, ‘__rmod__’, ‘__rmul__’, ‘__ror__’, ‘__rpow__’, ‘__rrshift__’, ‘__rshift__’, ‘__rsub__’, ‘__rtruediv__’, ‘__rxor__’, ‘__setattr__’, ‘__sizeof__’, ‘__str__’, ‘__sub__’, ‘__subclasshook__’, ‘__truediv__’, ‘__trunc__’, ‘__xor__’, ‘bit_length’, ‘conjugate’, ‘denominator’, ‘imag’, ‘numerator’, ‘real’]</code></p>
+<h2 id="funções-emétodos">Funções e métodos</h2>
 <p>Sempre quando criamos funções, o python cria um objeto em cima da função. Quando colocamos funções dentro de uma classe elas ficam conhecidas como métodos. Como python tudo é um objeto, ele aceita apenas passagem-por-referência, isso significa que quando uma variável entra dentro de uma função ela é verdadeiramente modificada e não apenas sua cópia. Exemplo:</p>
-
-<pre><code class="language-python">def um():
-  x = 2
-  print (x)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">um</span>():
+  x <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+  <span style="color:#66d9ef">print</span> (x)
   dobra (x)
-  print (x)
-def dobra(y):
-  y = y * y
-</code></pre>
-
-<p>Com saída proveniente do programa <code>um()</code>, 2 e 4. Assim, o programa dobra() modificou verdadeiramente a variável.</p>
-
-<h2 id="definindo-uma-classe">Definindo uma classe</h2>
-
+  <span style="color:#66d9ef">print</span> (x)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dobra</span>(y):
+  y <span style="color:#f92672">=</span> y <span style="color:#f92672">*</span> y
+</code></pre></div><p>Com saída proveniente do programa <code>um()</code>, 2 e 4. Assim, o programa dobra() modificou verdadeiramente a variável.</p>
+<h2 id="definindo-umaclasse">Definindo uma classe</h2>
 <p>Uma classe é o que define todo o conceito de orientação a objetos, sua instâncias, métodos e outros. Em python uma classe de um certo objeto é o mesmo que seu tipo, já que TUDO é um objeto. Agora vamos mostrar como ela é utilizada em python. Vamos definir uma classe então:</p>
-
-<pre><code class="language-python">class Retangulo(object):
-  def __init__(self, largura, comprimento):
-    self._largura = largura
-    self._comprimento = comprimento
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Retangulo</span>(object):
+  <span style="color:#66d9ef">def</span> __init__(self, largura, comprimento):
+    self<span style="color:#f92672">.</span>_largura <span style="color:#f92672">=</span> largura
+    self<span style="color:#f92672">.</span>_comprimento <span style="color:#f92672">=</span> comprimento
 Agora, vamos definir algumas instâncias com tipo Retângulo:
-c = Retangulo(1, 0)
-d = Retangulo(2, 0)
-e = Retangulo(3, 0)
-print (c._largura)
-print (d._largura)
-print (e._largura)
-</code></pre>
-
-<p>O que retorna como saída, 1, 2, 3. Ambas c e d se referem a duas instâncias diferentes da classe <code>Retangulo</code>. O atributo de instância object é acessado utilizando o operador . (ponto).</p>
-
+c <span style="color:#f92672">=</span> Retangulo(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)
+d <span style="color:#f92672">=</span> Retangulo(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>)
+e <span style="color:#f92672">=</span> Retangulo(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>)
+<span style="color:#66d9ef">print</span> (c<span style="color:#f92672">.</span>_largura)
+<span style="color:#66d9ef">print</span> (d<span style="color:#f92672">.</span>_largura)
+<span style="color:#66d9ef">print</span> (e<span style="color:#f92672">.</span>_largura)
+</code></pre></div><p>O que retorna como saída, 1, 2, 3. Ambas c e d se referem a duas instâncias diferentes da classe <code>Retangulo</code>. O atributo de instância object é acessado utilizando o operador . (ponto).</p>
 <p>Agora, o que seria esse método <code>__init__</code> utilizado para definir a classe?</p>
-
 <p>Esse é o construtor em python.</p>
-
 <p>Agora vamos definir como é feito o encapsulamento em python:</p>
-
-<pre><code class="language-python">class Retangulo(object):
-  def getLargura(self):
-    return self._largura
-  def setLargura(self, valor):
-    self._largura = valor
-  largura = property( fget = getLargura, fset = setLargura)
-</code></pre>
-
-<p>Esses métodos criados são utilizados para prover acesso aos atributos. Exemplo:</p>
-
-<pre><code class="language-python">c.setLargural(2)
-print (c.getLargura())
-</code></pre>
-
-<p>O que modifica a largura da instância c para 2.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Retangulo</span>(object):
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getLargura</span>(self):
+    <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_largura
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">setLargura</span>(self, valor):
+    self<span style="color:#f92672">.</span>_largura <span style="color:#f92672">=</span> valor
+  largura <span style="color:#f92672">=</span> property( fget <span style="color:#f92672">=</span> getLargura, fset <span style="color:#f92672">=</span> setLargura)
+</code></pre></div><p>Esses métodos criados são utilizados para prover acesso aos atributos. Exemplo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c<span style="color:#f92672">.</span>setLargural(<span style="color:#ae81ff">2</span>)
+<span style="color:#66d9ef">print</span> (c<span style="color:#f92672">.</span>getLargura())
+</code></pre></div><p>O que modifica a largura da instância c para 2.</p>
 <p>Agora o property é um atributo de classe para promover o get e o set. O argumento fget é uma propriedade específica do “getter” e o argumento fset é uma propriedade específica do “setter”. Seu uso é simples, como pode ser visto abaixo:</p>
-
-<pre><code class="language-python">c.setLargura(2)
-print (c.getLargura())
-//o que seria equivalente utilizando property a:
-c.largura = 2
-print (c.largura)
-</code></pre>
-
-<p>Além disso, podemos também utilizar em python sobrecarga dos operadores, que determinaria outra ação para uma soma entre os objetos ou qualquer outra operação. Por exemplo:</p>
-
-<pre><code class="language-python">def __add__(self, c):
-  return Retangulo(self.largura + c.largura, self.comprimento + c.comprimento)
-</code></pre>
-
-<p>Assim quando utilizamos uma soma ele vai executar as ações definidas acima. Além desses podemos fazer para subtração <code>__sub__</code> e para multiplicação <code>__mul__</code>.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c<span style="color:#f92672">.</span>setLargura(<span style="color:#ae81ff">2</span>)
+<span style="color:#66d9ef">print</span> (c<span style="color:#f92672">.</span>getLargura())
+<span style="color:#f92672">//</span>o que seria equivalente utilizando property a:
+c<span style="color:#f92672">.</span>largura <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+<span style="color:#66d9ef">print</span> (c<span style="color:#f92672">.</span>largura)
+</code></pre></div><p>Além disso, podemos também utilizar em python sobrecarga dos operadores, que determinaria outra ação para uma soma entre os objetos ou qualquer outra operação. Por exemplo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> __add__(self, c):
+  <span style="color:#66d9ef">return</span> Retangulo(self<span style="color:#f92672">.</span>largura <span style="color:#f92672">+</span> c<span style="color:#f92672">.</span>largura, self<span style="color:#f92672">.</span>comprimento <span style="color:#f92672">+</span> c<span style="color:#f92672">.</span>comprimento)
+</code></pre></div><p>Assim quando utilizamos uma soma ele vai executar as ações definidas acima. Além desses podemos fazer para subtração <code>__sub__</code> e para multiplicação <code>__mul__</code>.</p>
 <p>Temos também em python métodos estatísticos. Eles são definidos da seguinte forma:</p>
-
-<pre><code class="language-python">@staticmethod
-  def main(*argv):
-    print (&quot;oi&quot;)
-</code></pre>
-
-<h2 id="classes-aninhadas">Classes Aninhadas</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a6e22e">@staticmethod</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>(<span style="color:#f92672">*</span>argv):
+    <span style="color:#66d9ef">print</span> (<span style="color:#e6db74">&#34;oi&#34;</span>)
+</code></pre></div><h2 id="classes-aninhadas">Classes Aninhadas</h2>
 <p>Em python podemos definir uma classe dentro de outra. Dessa forma elas são conhecidas como aninhadas. Conforme o exemplo:</p>
-
-<pre><code class="language-python">class Ponto(object):
-  def __init__(self):
-    self.y = 0
-    self.x = 0
-  class OutroPonto(object):
-    def __init__(self):
-      self.x = 0  
-      selt.y = 1
-    def f(self):
-      self.x = self.y
-</code></pre>
-
-<p>Python trata uma classe aninhada da mesma forma que uma classe não aninhada. Como pode ser visto:</p>
-
-<pre><code class="language-python">obj = Ponto.OutroPonto()
-obj.f()
-</code></pre>
-
-<h2 id="herança"> Herança</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Ponto</span>(object):
+  <span style="color:#66d9ef">def</span> __init__(self):
+    self<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    self<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OutroPonto</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self):
+      self<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  
+      selt<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(self):
+      self<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>y
+</code></pre></div><p>Python trata uma classe aninhada da mesma forma que uma classe não aninhada. Como pode ser visto:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">obj <span style="color:#f92672">=</span> Ponto<span style="color:#f92672">.</span>OutroPonto()
+obj<span style="color:#f92672">.</span>f()
+</code></pre></div><h2 id="herança"> Herança</h2>
 <p>Primeiramente, o que seria o conceito de herança dentro do desenvolvimento orientado a objetos?</p>
-
 <p>Herança é o conceito no qual, você cria uma nova classe a partir de uma classe já existente. Herdando seus atributos e métodos.</p>
-
 <p>Isso ajuda você a escrever menos códigos repetitivos, por exemplo, quando temos bases, já vieram diversos atributos considerados úteis para uso em cada tipo de variável. Essa foi uma herança de object. Agora vamos ver como utilizá-la em python:</p>
-
-<pre><code class="language-python">class Pessoa(object):
-  FEMALE = 0
-  MALE = 1
-  def __init__(self, nome, sexo):
-    super(Pessoa, self).__init__()
-    self._nome = nome
-    self._sexo = sexo
-  def __str__(self):
-    return str(self._nome)
-class Pais(Pessoa):
-  def __init__(self, nome, sexo, crianca):
-    super(Pais, self).__init__(nome, sexo)
-    self._crianca = crianca
-  def getCrianca(self, i):
-    return self._crianca[i]
-  def __str__(self):
-    pass
-</code></pre>
-
-<p>Assim, um pai vai possuir todos os atributos de pessoa. O que evita que esses atributos sejam escritos novamente na classe Pais. Diferente de outras linguagens, também possuímos uma herança múltipla em python. Conforme visto a seguir:</p>
-
-<pre><code class="language-python">class Nada1(object):
-  def g():
-    pass
-class Nada2(object):
-  pass
-  def g():
-    pass
-class Nada3(Nada1, Nada2):
-  pass
-</code></pre>
-
-<h2 id="exceções"> Exceções</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pessoa</span>(object):
+  FEMALE <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  MALE <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">def</span> __init__(self, nome, sexo):
+    super(Pessoa, self)<span style="color:#f92672">.</span>__init__()
+    self<span style="color:#f92672">.</span>_nome <span style="color:#f92672">=</span> nome
+    self<span style="color:#f92672">.</span>_sexo <span style="color:#f92672">=</span> sexo
+  <span style="color:#66d9ef">def</span> __str__(self):
+    <span style="color:#66d9ef">return</span> str(self<span style="color:#f92672">.</span>_nome)
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pais</span>(Pessoa):
+  <span style="color:#66d9ef">def</span> __init__(self, nome, sexo, crianca):
+    super(Pais, self)<span style="color:#f92672">.</span>__init__(nome, sexo)
+    self<span style="color:#f92672">.</span>_crianca <span style="color:#f92672">=</span> crianca
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getCrianca</span>(self, i):
+    <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_crianca[i]
+  <span style="color:#66d9ef">def</span> __str__(self):
+    <span style="color:#66d9ef">pass</span>
+</code></pre></div><p>Assim, um pai vai possuir todos os atributos de pessoa. O que evita que esses atributos sejam escritos novamente na classe Pais. Diferente de outras linguagens, também possuímos uma herança múltipla em python. Conforme visto a seguir:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nada1</span>(object):
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">g</span>():
+    <span style="color:#66d9ef">pass</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nada2</span>(object):
+  <span style="color:#66d9ef">pass</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">g</span>():
+    <span style="color:#66d9ef">pass</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nada3</span>(Nada1, Nada2):
+  <span style="color:#66d9ef">pass</span>
+</code></pre></div><h2 id="exceções"> Exceções</h2>
 <p>Em python temos um objeto Exception que pode ser definido uma ação quando ocorre uma exceção. Por exemplo:</p>
-
-<pre><code class="language-python">class Excecao(Exception):
-  pass
-def t():
-  raise A
-def s():
-  try:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Excecao</span>(<span style="color:#a6e22e">Exception</span>):
+  <span style="color:#66d9ef">pass</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">t</span>():
+  <span style="color:#66d9ef">raise</span> A
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">s</span>():
+  <span style="color:#66d9ef">try</span>:
     t()
-  except A:
-    pass
-</code></pre>
-
-<p>Um método levanta uma exceção usando o identificador raise: Um identificador raise é similar a um identificador return. Uma identificador return representa a terminação normal de um método e o objeto retornado combina o valor do retorno do método. Um identificador raise representa a terminação anormal de um método e o objeto levantado representa o tipo de erro encontrado. O método f levanta uma exceção de A.</p>
-
+  <span style="color:#66d9ef">except</span> A:
+    <span style="color:#66d9ef">pass</span>
+</code></pre></div><p>Um método levanta uma exceção usando o identificador raise: Um identificador raise é similar a um identificador return. Uma identificador return representa a terminação normal de um método e o objeto retornado combina o valor do retorno do método. Um identificador raise representa a terminação anormal de um método e o objeto levantado representa o tipo de erro encontrado. O método f levanta uma exceção de A.</p>
 <p>Os alimentadores da exceção são definidos usando um bloco try: O corpo do bloco try está executado qualquer um até que uma exceção esteja levantada ou até que termine normalmente. Um ou mais alimentadores de exceção seguem em um bloco try. Cada alimentador de exceção consiste na cláusula que especifica as exceções a serem travadas, e um bloco do código, que é executado quando a exceção ocorre. Quando o corpo do bloco try levanta uma exceção para que uma exceção está definida, o controle é transferido ao corpo do alimentador da exceção.</p>
-
 <h2 id="recomendações">Recomendações</h2>
-
 <p><a href="http://www.cafepy.com/article/python_types_and_objects/python_types_and_objects.html">Python Types and Objects</a> de Shalabh Chaturvedi</p>
-
 <p><a href="http://www.cafepy.com/article/python_attributes_and_methods/">Python Attributes and Methods</a> de Shalabh Chaturvedi</p>
-
 <p><a href="https://docs.python.org/2/tutorial/classes.html">Python 2.x official documentation</a> about classes</p>
-
 <p><a href="https://docs.python.org/3/tutorial/classes.html">Python 3.x official documentation</a></p>
-
 <p><a href="http://legacy.python.org/dev/peps/pep-0252/">PEP 252 — Making Types Look More Like Classes</a> and many other PEPs like PEP <a href="http://legacy.python.org/dev/peps/pep-3115/">3115 — Metaclasses in Python 3000</a> and / <a href="http://legacy.python.org/dev/peps/pep-3119">PEP 3119 — Introducing Abstract Base Classes</a> by Guido van Rossum and others</p>
-
 <p><a href="http://rhettinger.wordpress.com/2011/05/26/super-considered-super/">Python’s super() considered super!</a> and <a href="http://legacy.python.org/dev/peps/pep-3135/">PEP 3135 — New Super</a> by Raymond Hettinger</p>
-
 <p><a href="http://www.rafekettler.com/magicmethods.html">A Guide to Python’s Magic Methods</a> by Rafe Kettler</p>
-
 <p><a href="http://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">Improve Your Python: Python Classes and Object Oriented Programming</a> by Jeff Knupp</p>
-
 <p><a href="http://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/">Drastically Improve Your Python: Understanding Python’s Execution Model</a> by Jeff Knupp</p>
-
 <p><a href="http://www.brianholdefehr.com/decorators-and-functional-python">Decorators and Functional Python</a> by Brian Holdefehr (despite the title, it has to do with classes too)</p>
-
 <p><a href="http://python-history.blogspot.it/2013/10/origin-of-metaclasses-in-python.html">Origin of metaclasses in Python</a> by Guido van Rossum</p>
-
 <p><a href="http://python-history.blogspot.it/2010/06/inside-story-on-new-style-classes.html">The Inside Story on New-Style Classes</a> by Guido van Rossum</p>
-
 <p><a href="http://lgiordani.com/blog/2014/03/05/oop-concepts-in-python-2-dot-x-part-1/">OOP Concepts in Python 2.x</a> by Leonardo Giordani (series of 3 articles, superseded by the following one)</p>
-
 <p><a href="http://lgiordani.com/blog/2014/08/20/python-3-oop-part-1-objects-and-types/">Python 3 OOP</a> by Leonardo Giordani (series of 6 articles)</p>
-
 <p><a href="http://lgiordani.com/blog/2015/03/14/python-3-oop-notebooks/">Python 3 OOP Notebooks</a> by Leonardo Giordani (IPython Notebooks version of the previous series of posts)</p>
-
 <p><a href="http://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/">Understanding Python metaclasses</a> by Ionel C. Mărieș</p>
-
-<h2 id="recomendações-de-livros-para-data-science-em-python">Recomendações de livros para data science em python</h2>
-
+<h2 id="recomendações-de-livros-para-data-science-empython">Recomendações de livros para data science em python</h2>
 <p><a href="https://github.com/donnemartin/data-science-ipython-notebooks">Página do Github com diversos livros para data science em python</a>, spoiler, estão em inglês. :p</p>
 </div>
   <footer class="post-footer">
@@ -338,12 +256,16 @@ def s():
 <script data-no-instant>InstantClick.init();</script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-71553462-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-71553462-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <script data-no-instant>
   hljs.initHighlightingOnLoad();
