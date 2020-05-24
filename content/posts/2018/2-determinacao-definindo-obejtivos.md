@@ -19,7 +19,7 @@ Sem nenhuma consciência de uma direção, sua identidade é solta a apenas est�
 
 O fenômeno de acordar um dia e descobrir que você está vivendo uma vida em que você não acredita e não ama, acontece e já aconteceu comigo. Quando você não decide ativamente quem você quer ser, você perde o controle.
 
-Assim como a sua vida, um carro sem alguém controlando o volante, anda apenas desgovernado. Caso você queira ser uma pessoa melhorada, com maior satisfação sobre tudo ao seu redor, você precisa tomar AÇÃO.
+Assim como a sua vida, um carro sem alguém controlando o volante, anda apenas desgovernado. Caso você queira ser uma pessoa melhor, com maior satisfação sobre tudo ao seu redor, você precisa tomar AÇÃO.
 
 Só que o truque de cada ação na sua vida, é que você precisa estar atento sobre cada escolha que você faz, se aquilo condiz com o que você acredita e que vai te aproximar do seu eu "ideal". Pois cada decisão pode te fazer mais próximo do seu objetivo ou te mover para cada vez mais longe. Em cada passo consciente que tomamos na nossa vida, conseguimos enxergar cada vez mais rápido, o próximo degrau. Ou seja, estamos nos aprimorando a cada passo, tornando nossa jornada mais rápida e simples.
 
@@ -43,7 +43,7 @@ A partir das pessoas que admiramos podemos tirar muitos ensinamentos. Primeirame
 
 Então escolha as pessoas que você admira, pode ser qualquer um, seu pai, sua mãe, Steve Jobs, Elon Musk. Então escolha algumas das características que verdadeiramente se destacam para você.
 
-Agora pense um pouco, porque você o admira tanto? Quais qualidades você quer para si mesmo? Depois disso vá além, pense no porque você admira essa qualidade. Por exemplo, talvez admire o Arnold Schwarzenegger por causa dos seus músculos. Mas porque? Seria por causa da sua dedicação? Seria por causa da fama que ele obteve por isso? Seria porque ele é forte?
+Agora pense um pouco, porque você o admira tanto? Quais qualidades você quer para si mesmo? Depois disso vá além, pense no porque você admira essa qualidade. Por exemplo, talvez admire o Arnold Schwarzenegger por causa dos seus músculos. Mas por quê? Seria por causa da sua dedicação? Seria por causa da fama que ele obteve por isso? Seria porque ele é forte?
 
 Talvez até mesmo se aprofundar nas histórias das pessoas que você admira, sempre com um pensamento crítico, para conhecer mais como foram desenvolvidas as características que você tanto admira. Esse exercício vai te ajudar a encontrar sua própria motivação e recompensa.
 

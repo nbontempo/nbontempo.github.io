@@ -2,7 +2,7 @@
 title: "Setup VSCode, ESLint and Prettier for react - 2020"
 date: 2020-05-01T19:33:49-03:00
 draft: false
-tags: ["React"]
+tags: ["React", "Javascript", "npm", "spa"]
 ---
 
 I'm on vacation passing most of my time on home so I started some small projects using react and this is the basic to bootstrap and write code with more productivity and with standards. As things changes quickly on frontend I dated my article, so this is a 2020 edition of this setup.
@@ -15,7 +15,7 @@ The intention of this setup is provide early feedback and automation for linting
 
 This command will create a standard react project inside the folder `little-project`
 
-## Configure the eslint
+## ESLint configuration
 
 [ESLint](https://eslint.org/) is currently the most popular linting tool, works well with ES6 and jsx files as well. The linting can be [configured in separated files with javascript, JSON or YAML and can be configured inside your `package.json` file](https://eslint.org/docs/user-guide/configuring). I prefer the configuration with separated file for the configuration of the eslint. Let's go to the `package.json` file and remove the `eslintConfig` object.
 
@@ -29,13 +29,14 @@ And let's add our depencies on the `DevDependecies` object on `package.json`:
 
 ```json
 "devDependencies": {
-    "babel-eslint": "^10.1.0",
+    "babel-eslint": "10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-babel": "^9.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
     "eslint-plugin-standard": "^4.0.1",
     "prettier": "^1.19.1"
 }
@@ -51,8 +52,9 @@ And now let's create our eslint configuration, create on root project folder one
     "prettier/react",
     "plugin:react/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "simple-import-sort"],
   "rules": {
+    "simple-import-sort/sort": "error",
     "prettier/prettier": "error"
   },
   "parser": "babel-eslint",
