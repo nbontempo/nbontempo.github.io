@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ansible on Nicolas Bontempo</title>
+    <link>http://nickbom.github.io/tags/ansible/</link>
+    <description>Recent content in Ansible on Nicolas Bontempo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Nov 2019 22:33:49 -0300</lastBuildDate>
+    
+	<atom:link href="http://nickbom.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting started with Ansible</title>
+      <link>http://nickbom.github.io/2019/11/getting-started-with-ansible/</link>
+      <pubDate>Sun, 24 Nov 2019 22:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/2019/11/getting-started-with-ansible/</guid>
+      <description>Ansible is a open source tool backed by red hat since 2015, that gives you the skill to control and configure multiple server from one single location. So, instead of having to go to each server and configure them, you can create automations with Ansible to do that for you. The benefits of Ansible are that:
+ Uses YAML with human readable language, that results in scripts that are simple to understand and to learn.</description>
+    </item>
+    
+  </channel>
+</rss>
