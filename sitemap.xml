@@ -3,6 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nickbom.github.io/tags/ansible/</loc>
+    <lastmod>2020-05-24T22:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/devops/</loc>
+    <lastmod>2020-05-24T22:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/2020/05/getting-started-with-ansible/</loc>
+    <lastmod>2020-05-24T22:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nickbom.github.io/tags/</loc>
+    <lastmod>2020-05-24T22:33:49-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://nickbom.github.io/tags/newsletter/</loc>
     <lastmod>2020-05-21T19:33:49-03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -11,13 +39,6 @@
   
   <url>
     <loc>http://nickbom.github.io/2020/05/newsletter-2020/1/</loc>
-    <lastmod>2020-05-21T19:33:49-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nickbom.github.io/tags/</loc>
     <lastmod>2020-05-21T19:33:49-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -54,27 +75,6 @@
   <url>
     <loc>http://nickbom.github.io/tags/spa/</loc>
     <lastmod>2020-05-01T19:33:49-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nickbom.github.io/tags/ansible/</loc>
-    <lastmod>2019-11-24T22:33:49-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nickbom.github.io/tags/devops/</loc>
-    <lastmod>2019-11-24T22:33:49-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nickbom.github.io/2019/11/getting-started-with-ansible/</loc>
-    <lastmod>2019-11-24T22:33:49-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Getting started with Ansible</title>
+      <link>http://nickbom.github.io/2020/05/getting-started-with-ansible/</link>
+      <pubDate>Sun, 24 May 2020 22:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/2020/05/getting-started-with-ansible/</guid>
+      <description>Ansible is a open source tool backed by red hat since 2015, that gives you the skill to control and configure multiple server from one single location. So, instead of having to go to each server and configure them, you can create automations with Ansible to do that for you. The benefits of Ansible are that:
+ Uses YAML with human readable language, that results in scripts that are simple to understand and to learn.</description>
+    </item>
+    
+    <item>
       <title>Newsletter - 2020/1</title>
       <link>http://nickbom.github.io/2020/05/newsletter-2020/1/</link>
       <pubDate>Thu, 21 May 2020 19:33:49 -0300</pubDate>
@@ -30,16 +40,6 @@
       <description>I&amp;rsquo;m on vacation passing most of my time on home so I started some small projects using react and this is the basic to bootstrap and write code with more productivity and with standards. As things changes quickly on frontend I dated my article, so this is a 2020 edition of this setup.
 The intention of this setup is provide early feedback and automation for linting and formatting.
 Let&amp;rsquo;s start creating the react project npx create-react-app little-project</description>
-    </item>
-    
-    <item>
-      <title>Getting started with Ansible</title>
-      <link>http://nickbom.github.io/2019/11/getting-started-with-ansible/</link>
-      <pubDate>Sun, 24 Nov 2019 22:33:49 -0300</pubDate>
-      
-      <guid>http://nickbom.github.io/2019/11/getting-started-with-ansible/</guid>
-      <description>Ansible is a open source tool backed by red hat since 2015, that gives you the skill to control and configure multiple server from one single location. So, instead of having to go to each server and configure them, you can create automations with Ansible to do that for you. The benefits of Ansible are that:
- Uses YAML with human readable language, that results in scripts that are simple to understand and to learn.</description>
     </item>
     
     <item>
