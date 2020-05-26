@@ -1,5 +1,5 @@
 ---
-title: "Newsletter - 2019 / 1"
+title: "Newsletter - 2019/1"
 date: 2019-02-04T16:33:49-03:00
 draft: false
 tags: ["Newsletter"]
