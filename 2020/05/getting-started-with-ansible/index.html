@@ -32,6 +32,10 @@
         
         
         <li class="">
+          <a href="/sobre/">About me</a>
+        </li>
+        
+        <li class="">
           <a href="https://github.com/nickbom">Github</a>
         </li>
         
@@ -43,10 +47,6 @@
           <a href="/posts/">Posts</a>
         </li>
         
-        <li class="">
-          <a href="/sobre/">Sobre o autor</a>
-        </li>
-        
       </ul>
     </nav>
   </header>
@@ -55,10 +55,11 @@
 <article class="post post-view">
   <header class="post-header">
     <h1 class="post-title">Getting started with Ansible</h1>
-    <p class="post-meta">Nicolas Bontempo · 24/05/2020<div style="color:grey; font-size:16px;">
+    <p class="post-meta">Nicolas Bontempo ·24/05/2020
+      <div style="color:grey; font-size:16px;">
         <strong>Tags:</strong> 
-        <a href="/%20/tags/%20devops">DevOps</a> 
-        <a href="/%20/tags/%20ansible">Ansible</a> 
+        <a href="/tags/devops">DevOps</a> 
+        <a href="/tags/ansible">Ansible</a> 
       </div>
     </p>
   </header>
@@ -79,38 +80,38 @@
 <p>To install Ansible refer to the <a href="%5Bhttps://docs.ansible.com/ansible/latest/installation_guide/index.html%5D(https://docs.ansible.com/ansible/latest/installation_guide/index.html)">documentation</a>.</p>
 <h3 id="creating-an-ansible-inventory">Creating an Ansible inventory</h3>
 <p>By default the Ansible inventory is organized on <code>/etc/ansible/hosts</code>, you can create your inventory in a INI file or YAML file. I will be creating a INI file to organize my inventory and subcategories inside it that are Ansible groups, in a way to organize our inventory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[service1]</span>
-<span style="color:#a6e22e">webserver-z</span>
-<span style="color:#66d9ef">[service2]</span>
-<span style="color:#a6e22e">webserver-x</span>
-<span style="color:#a6e22e">webserver-y</span>
-<span style="color:#66d9ef">[linux_servers:children]</span>
-<span style="color:#a6e22e">service1</span>
-<span style="color:#a6e22e">service2</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">[service1]
+webserver-z
+[service2]
+webserver-x
+webserver-y
+[linux_servers:children]
+service1
+service2
 </code></pre></div><p>So, in this example I created 3 managed nodes that are separated in 2 Ansible groups, and there are the default groups that are &ldquo;all&rdquo; nodes and &ldquo;ungrouped&rdquo; nodes. And besides that I created a nested group <code>linux_servers:children</code>, that is pointing to the servers of other groups.</p>
 <p>Another thing that can be configured on the inventory are variables that normally are the variables used to connect with your nodes. For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[service1]</span>
-<span style="color:#a6e22e">webserver-z</span>
-<span style="color:#a6e22e">webserver-w</span>
-<span style="color:#a6e22e">webserver-x ansible_password</span><span style="color:#f92672">=</span><span style="color:#e6db74">&lt;override_var_password&gt;</span>
-<span style="color:#66d9ef">[service1:vars]</span>
-<span style="color:#a6e22e">ansible_username</span><span style="color:#f92672">=</span><span style="color:#e6db74">&lt;user&gt;</span>
-<span style="color:#a6e22e">ansible_password</span><span style="color:#f92672">=</span><span style="color:#e6db74">&lt;password&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">[service1]
+webserver-z
+webserver-w
+webserver-x ansible_password=&lt;override_var_password&gt;
+[service1:vars]
+ansible_username=&lt;user&gt;
+ansible_password=&lt;password&gt;
 </code></pre></div><p>A good practice is when creating variables to use colon to reference the group of nodes that are being referenced by the variables, and I included on this example one variable password on the node &ldquo;webserver-x&rdquo; that is using a different password, so you can override the defined variable for this specific node. You can define variables for nested groups as well.</p>
 <p>Basically in the end, using what we learned, the file will look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[service1]</span>
-<span style="color:#a6e22e">webserver-x</span>
-<span style="color:#a6e22e">webserver-y</span>
-<span style="color:#66d9ef">[service2]</span>
-<span style="color:#a6e22e">webserver-p</span>
-<span style="color:#a6e22e">webserver-g</span>
-<span style="color:#a6e22e">webserver-f</span>
-<span style="color:#66d9ef">[linux_servers:children]</span>
-<span style="color:#a6e22e">service1</span>
-<span style="color:#a6e22e">service2</span>
-<span style="color:#66d9ef">[linux_servers:vars]</span>
-<span style="color:#a6e22e">ansible_user</span><span style="color:#f92672">=</span><span style="color:#e6db74">&lt;user&gt;</span>
-<span style="color:#a6e22e">ansible_password</span><span style="color:#f92672">=</span><span style="color:#e6db74">&lt;password&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">[service1]
+webserver-x
+webserver-y
+[service2]
+webserver-p
+webserver-g
+webserver-f
+[linux_servers:children]
+service1
+service2
+[linux_servers:vars]
+ansible_user=&lt;user&gt;
+ansible_password=&lt;password&gt;
 </code></pre></div><p>So, to test if everything is working we can run a ping on our inventory, <code>ansible linux_servers -m ping</code>, this will run a module called ping on our nested group <code>linux_servers</code> using shared variables of the nested group.</p>
 <h2 id="writing-ansible-playbooks">Writing Ansible playbooks</h2>
 <p>First you will need to understand what is a module, a module can be defined as a code that will execute some logic, if you have familiarity with programming, module can be interpreted as a function, and as well they can be used with arguments. Modules can be called on the command like we did above with the <code>ping</code> module and can be defined inside the playbooks.</p>
