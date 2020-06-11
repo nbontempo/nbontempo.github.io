@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Deploy dotnet core application on app engine with github actions</title>
+      <link>http://nickbom.github.io/2020/06/deploy-dotnet-core-application-on-app-engine-with-github-actions/</link>
+      <pubDate>Mon, 08 Jun 2020 22:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/2020/06/deploy-dotnet-core-application-on-app-engine-with-github-actions/</guid>
+      <description>In this tutorial, I will describe for you how to set up a Github actions workflow for your project to automatically run your tests, build your app and deploy the new code to google app engine service. At the time of this tutorial the last Dotnet core version supported was 2.1, so I created a docker file to deploy for this tutorial on Dotnet core 3.1.
+1- Setup your project The first thing you need to do is create your app engine on the google cloud, for that you should go to the Google Cloud Console and create a project.</description>
+    </item>
+    
+    <item>
       <title>Getting started with Ansible</title>
       <link>http://nickbom.github.io/2020/05/getting-started-with-ansible/</link>
       <pubDate>Sun, 24 May 2020 22:33:49 -0300</pubDate>

@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Nicolas Bontempo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2020 22:33:49 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2020 22:33:49 -0300</lastBuildDate>
     
 	<atom:link href="http://nickbom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://nickbom.github.io/tags/devops/</link>
+      <pubDate>Mon, 08 Jun 2020 22:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://nickbom.github.io/tags/git/</link>
+      <pubDate>Mon, 08 Jun 2020 22:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github actions</title>
+      <link>http://nickbom.github.io/tags/github-actions/</link>
+      <pubDate>Mon, 08 Jun 2020 22:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google cloud</title>
+      <link>http://nickbom.github.io/tags/google-cloud/</link>
+      <pubDate>Mon, 08 Jun 2020 22:33:49 -0300</pubDate>
+      
+      <guid>http://nickbom.github.io/tags/google-cloud/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ansible</title>
@@ -17,15 +53,6 @@
       <pubDate>Sun, 24 May 2020 22:33:49 -0300</pubDate>
       
       <guid>http://nickbom.github.io/tags/ansible/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>http://nickbom.github.io/tags/devops/</link>
-      <pubDate>Sun, 24 May 2020 22:33:49 -0300</pubDate>
-      
-      <guid>http://nickbom.github.io/tags/devops/</guid>
       <description></description>
     </item>
     
@@ -98,15 +125,6 @@
       <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://nickbom.github.io/tags/determina%C3%A7%C3%A3o/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>http://nickbom.github.io/tags/git/</link>
-      <pubDate>Thu, 20 Jul 2017 16:38:04 -0300</pubDate>
-      
-      <guid>http://nickbom.github.io/tags/git/</guid>
       <description></description>
     </item>
     
