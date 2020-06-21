@@ -3,7 +3,7 @@ title: Getting started with Ansible
 date: 2020-05-24T22:33:49-03:00
 template: "post"
 draft: false
-slug: "2020-01-newsletter"
+slug: "gettins-started-with-ansible"
 category: "DevOps"
 tags:
   - "DevOps"

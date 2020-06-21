@@ -7,6 +7,7 @@ slug: "2020-01-newsletter"
 category: "Newsletter"
 tags:
   - "Newsletter"
+  - "Incidents"
 description: "Recently, I have studied more and more about how a company should handle incidents and how a product team should structure themselves to create a better value for the final user. This is my reading list about the subjects..."
 socialImage: "/media/image-2.jpg"
 ---
